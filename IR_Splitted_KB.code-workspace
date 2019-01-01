@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "IR_Splitted_Slave.X"
+		},
+		{
+			"path": "IR_Splitted_Master.X"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"ringbuffer.h": "c",
+			"ir_format.h": "c",
+			"xc.h": "c",
+			"stdint.h": "c",
+			"cci.h": "c"
+		}
+	}
+}

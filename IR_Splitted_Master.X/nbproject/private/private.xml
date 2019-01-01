@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/imada/OneDrive/Documents/MPLAB%20X/IR_Splitted_KB/IR_Splitted_Master.X/ringBuffer.c</file>
+            <file>file:/C:/Users/imada/OneDrive/Documents/MPLAB%20X/IR_Splitted_KB/IR_Splitted_Master.X/main.c</file>
+            <file>file:/C:/Users/imada/OneDrive/Documents/MPLAB%20X/IR_Splitted_KB/IR_Splitted_Master.X/usb_events.c</file>
+            <file>file:/C:/Users/imada/OneDrive/Documents/MPLAB%20X/IR_Splitted_KB/IR_Splitted_Slave.X/swMatrix.c</file>
+            <file>file:/C:/Users/imada/OneDrive/Documents/MPLAB%20X/IR_Splitted_KB/IR_Splitted_Master.X/io_mapping.h</file>
+            <file>file:/C:/Users/imada/OneDrive/Documents/MPLAB%20X/IR_Splitted_KB/IR_Splitted_Slave.X/ringBuffer.c</file>
+            <file>file:/C:/Users/imada/OneDrive/Documents/MPLAB%20X/IR_Splitted_KB/IR_Splitted_Master.X/HID_Define.h</file>
+            <file>file:/C:/Users/imada/OneDrive/Documents/MPLAB%20X/IR_Splitted_KB/IR_Splitted_Slave.X/main.c</file>
+            <file>file:/C:/Users/imada/OneDrive/Documents/MPLAB%20X/IR_Splitted_KB/IR_Splitted_Slave.X/interrupts.c</file>
+            <file>file:/C:/Users/imada/OneDrive/Documents/MPLAB%20X/IR_Splitted_KB/IR_Splitted_Master.X/app_led_usb_status.c</file>
+            <file>file:/C:/Users/imada/OneDrive/Documents/MPLAB%20X/IR_Splitted_KB/IR_Splitted_Master.X/system.c</file>
+            <file>file:/C:/Users/imada/OneDrive/Documents/MPLAB%20X/IR_Splitted_KB/IR_Splitted_Master.X/leds.h</file>
+            <file>file:/C:/Users/imada/OneDrive/Documents/MPLAB%20X/IR_Splitted_KB/IR_format.h</file>
+            <file>file:/C:/Users/imada/OneDrive/Documents/MPLAB%20X/IR_Splitted_KB/IR_Splitted_Master.X/swMatrix.c</file>
+            <file>file:/C:/Users/imada/OneDrive/Documents/MPLAB%20X/IR_Splitted_KB/IR_Splitted_Slave.X/user.c</file>
+            <file>file:/C:/Users/imada/OneDrive/Documents/MPLAB%20X/IR_Splitted_KB/IR_Splitted_Master.X/ringBuffer.h</file>
+            <file>file:/C:/Users/imada/OneDrive/Documents/MPLAB%20X/IR_Splitted_KB/IR_Splitted_Slave.X/system.c</file>
+            <file>file:/C:/Users/imada/OneDrive/Documents/MPLAB%20X/IR_Splitted_KB/IR_Splitted_Master.X/leds.c</file>
+            <file>file:/C:/Users/imada/OneDrive/Documents/MPLAB%20X/IR_Splitted_KB/IR_Splitted_Master.X/app_device_keyboard.c</file>
+        </group>
+    </open-files>
+</project-private>

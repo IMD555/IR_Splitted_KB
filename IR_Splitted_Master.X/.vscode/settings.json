@@ -1,0 +1,13 @@
+{
+	"C_Cpp.default.cStandard": "c99",
+	"editor.insertSpaces": false,
+	"files.associations": {
+		"stdbool.h": "c",
+		"buttons.h": "c",
+		"xc.h": "c",
+		"usb.h": "c",
+		"ir_format.h": "c",
+		"stdint.h": "c"
+	},
+	"C_Cpp.intelliSenseEngineFallback": "Disabled"
+}

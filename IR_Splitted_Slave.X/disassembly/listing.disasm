@@ -1,0 +1,887 @@
+Disassembly Listing for IR_Splitted_Slave
+Generated From:
+C:/Users/imada/OneDrive/Documents/MPLAB X/IR_Splitted_KB/IR_Splitted_Slave.X/dist/Configuration/production/IR_Splitted_Slave.X.production.elf
+Dec 2, 2018 5:01:50 PM
+
+---  C:/Users/imada/OneDrive/Documents/MPLAB X/IR_Splitted_KB/IR_Splitted_Slave.X/user.c  ---------------
+1:             /******************************************************************************/
+2:             /* Files to Include                                                           */
+3:             /******************************************************************************/
+4:             
+5:             #include <xc.h>         /* XC8 General Include File */
+6:             
+7:             #include <stdint.h>         /* For uint8_t definition */
+8:             #include <stdbool.h>        /* For true/false definition */
+9:             
+10:            #include "user.h"
+11:            #include "swMatrix.h"
+12:            
+13:            ///////////////////////////////
+14:            #define	LEFT		//RIGHT KB : Comment out this row
+15:            ///////////////////////////////
+16:            #ifdef	LEFT
+17:            #define	SENDER	0x80
+18:            #else
+19:            #define	RIGHT
+20:            #define	SENDER	0xc0
+21:            #endif
+22:            #define	ACK		0x38
+23:            
+24:            //COMPARE MODE
+25:            #define	L2H		0x08
+26:            #define	H2L		0x09
+27:            #define	TGL		0x02
+28:            #define	TGLwR	0x01
+29:            
+30:            uint8_t CRC3(uint8_t data, uint8_t dataLength);
+31:            
+32:            //////ABFGCE.D
+33:            const uint8_t bin2seg7[] = {
+34:            	0b11101101, // 0
+35:            	0b01001000, // 1
+36:            	0b11010101, // 2
+37:            	0b11011001, // 3
+38:            	0b01111000, // 4
+39:            	0b10111001, // 5
+40:            	0b10111101, // 6
+41:            	0b11101000, // 7
+42:            	0b11111101, // 8
+43:            	0b11111001, // 9
+44:            	0b11111100, // A
+45:            	0b00111101, // b
+46:            	0b00010101, // c
+47:            	0b01011101, // d
+48:            	0b10110101, // E
+49:            	0b10110100, // F
+50:            };
+51:            
+52:            
+53:            /******************************************************************************/
+54:            /* User Functions                                                             */
+55:            /******************************************************************************/
+56:            
+57:            /* <Initialize variables in user.h and insert code for user algorithms.> */
+58:            
+59:            void InitApp(void)
+60:            {
+61:            	/* TODO Initialize User Ports/Peripherals/Project here */
+62:            
+63:            	/* Setup analog functionality and port direction */
+64:            	ANSELA = 0x00;
+00B2  0E00     MOVLW 0x0
+00B4  013A     MOVLB 0x3A
+00B6  6F40     MOVWF 0x40, BANKED
+65:            	LATA = 0x3f;
+00B8  0E3F     MOVLW 0x3F
+00BA  013F     MOVLB 0x3F
+00BC  6FBA     MOVWF 0xBA, BANKED
+66:            	TRISA = 0x00; //1:Input
+00BE  0E00     MOVLW 0x0
+00C0  6FC2     MOVWF 0xC2, BANKED
+67:            	WPUA = 0x00; //1:WPU Enabled
+00C2  0E00     MOVLW 0x0
+00C4  013A     MOVLB 0x3A
+00C6  6F41     MOVWF 0x41, BANKED
+68:            	ODCONA = 0x00; //1:Open drain
+00C8  0E00     MOVLW 0x0
+00CA  6F42     MOVWF 0x42, BANKED
+69:            	SLRCONA = 0x00; //1:Limited slew rate
+00CC  0E00     MOVLW 0x0
+00CE  6F43     MOVWF 0x43, BANKED
+70:            	INLVLA = 0xff; //1:ST 0:TTL
+00D0  6944     SETF 0x44, BANKED
+71:            	CCDPA = 0x00; //1:H Current control Enabled
+00D2  0E00     MOVLW 0x0
+00D4  6F48     MOVWF sw, BANKED
+72:            	CCDNA = 0x00; //1:L Current control Enabled
+00D6  0E00     MOVLW 0x0
+00D8  6F49     MOVWF 0x49, BANKED
+73:            
+74:            	ANSELB = 0x00;
+00DA  0E00     MOVLW 0x0
+00DC  6F50     MOVWF 0x50, BANKED
+75:            	LATB = 0x00;
+00DE  0E00     MOVLW 0x0
+00E0  013F     MOVLB 0x3F
+00E2  6FBB     MOVWF 0xBB, BANKED
+76:            	TRISB = 0x00;
+00E4  0E00     MOVLW 0x0
+00E6  6FC3     MOVWF 0xC3, BANKED
+77:            	WPUB = 0x00;
+00E8  0E00     MOVLW 0x0
+00EA  013A     MOVLB 0x3A
+00EC  6F51     MOVWF 0x51, BANKED
+78:            	ODCONB = 0x00;
+00EE  0E00     MOVLW 0x0
+00F0  6F52     MOVWF 0x52, BANKED
+79:            	SLRCONB = 0x00;
+00F2  0E00     MOVLW 0x0
+00F4  6F53     MOVWF 0x53, BANKED
+80:            	INLVLB = 0xff;
+00F6  6954     SETF 0x54, BANKED
+81:            	CCDPB = 0xff;
+00F8  6958     SETF 0x58, BANKED
+82:            	CCDNB = 0x00;
+00FA  0E00     MOVLW 0x0
+00FC  6F59     MOVWF 0x59, BANKED
+83:            
+84:            	ANSELC = 0x00;
+00FE  0E00     MOVLW 0x0
+0100  6F60     MOVWF __pdataBANK0, BANKED
+85:            	LATC = 0x0e;
+0102  0E0E     MOVLW 0xE
+0104  013F     MOVLB 0x3F
+0106  6FBC     MOVWF 0xBC, BANKED
+86:            	TRISC = 0x10;
+0108  0E10     MOVLW 0x10
+010A  6FC4     MOVWF 0xC4, BANKED
+87:            	WPUC = 0x00;
+010C  0E00     MOVLW 0x0
+010E  013A     MOVLB 0x3A
+0110  6F61     MOVWF 0x61, BANKED
+88:            	ODCONC = 0x00;
+0112  0E00     MOVLW 0x0
+0114  6F62     MOVWF 0x62, BANKED
+89:            	SLRCONC = 0x00;
+0116  0E00     MOVLW 0x0
+0118  6F63     MOVWF 0x63, BANKED
+90:            	INLVLC = 0xff;
+011A  6964     SETF 0x64, BANKED
+91:            	CCDPC = 0x00;
+011C  0E00     MOVLW 0x0
+011E  6F68     MOVWF 0x68, BANKED
+92:            	CCDNC = 0x00;
+0120  0E00     MOVLW 0x0
+0122  6F69     MOVWF 0x69, BANKED
+93:            
+94:            	WPUE = 0x08;
+0124  0E08     MOVLW 0x8
+0126  6F81     MOVWF 0x81, BANKED
+95:            	INLVLE = 0x08;
+0128  0E08     MOVLW 0x8
+012A  6F84     MOVWF 0x84, BANKED
+96:            
+97:            	CCDCON = 0x83; //1mA
+012C  0E83     MOVLW 0x83
+012E  6FBE     MOVWF 0xBE, BANKED
+98:            
+99:            	/* Initialize peripherals */
+100:           	//	U1BRG = 7; //7812.5bps,Calculated by Fosc = 1MHz
+101:           	//	//	U1BRG = 15; //7812.5/2bps,Calculated by Fosc = 1MHz
+102:           	//	U1BRG = 8; //7812.5bps,Calculated by Fosc = 1MHz
+103:           	//
+104:           	//	U1CON0 = 0x20; //TODO: RX disabled
+105:           	//	U1CON1 = 0x80;
+106:           	//	U1CON2 = 0x88;
+107:           
+108:           	T2CLK = 0x01; //freerun 56kHz
+0130  0E01     MOVLW 0x1
+0132  013F     MOVLB 0x3F
+0134  6FAE     MOVWF 0xAE, BANKED
+109:           	T2RST = 0x04;
+0136  0E04     MOVLW 0x4
+0138  6FAF     MOVWF 0xAF, BANKED
+110:           	//	T2HLT = 0x04;
+111:           	T2HLT = 0x00;
+013A  0E00     MOVLW 0x0
+013C  6FAD     MOVWF 0xAD, BANKED
+112:           	T2PR = 142;
+013E  0E8E     MOVLW 0x8E
+0140  6FAB     MOVWF 0xAB, BANKED
+113:           	T2CON = 0x80;
+0142  0E80     MOVLW 0x80
+0144  6FAC     MOVWF 0xAC, BANKED
+114:           	CCPTMRS1bits.P5TSEL = 0x01; //PWM5 use TMR2
+0146  515F     MOVF 0x5F, W, BANKED
+0148  0BFC     ANDLW 0xFC
+014A  0901     IORLW 0x1
+014C  6F5F     MOVWF 0x5F, BANKED
+115:           	PWM5CON = 0x80;
+014E  0E80     MOVLW 0x80
+0150  6F6E     MOVWF 0x6E, BANKED
+116:           	PWM5DCH = T2PR / 2;
+0154  FEAC     NOP
+0156  F001     NOP
+0158  6A02     CLRF 0x2, ACCESS
+015A  0E00     MOVLW 0x0
+015C  6E04     MOVWF 0x4, ACCESS
+015E  0E02     MOVLW 0x2
+0160  6E03     MOVWF pushingCount, ACCESS
+0162  EC82     CALL 0x304, 0
+0164  F001     NOP
+0166  5001     MOVF __pcstackCOMRAM, W, ACCESS
+0168  013F     MOVLB 0x3F
+016A  6F6D     MOVWF 0x6D, BANKED
+117:           
+118:           	//CLC1 = CCP1/2
+119:           	CLC1POL = 0;
+016C  0E00     MOVLW 0x0
+016E  013C     MOVLB 0x3C
+0170  6F75     MOVWF 0x75, BANKED
+120:           	CLC1SEL0 = 0x18; //CLC1D1 = PWM5
+0172  0E18     MOVLW 0x18
+0174  6F76     MOVWF 0x76, BANKED
+121:           	CLC1SEL1 = 0x24; //CLC1D2 = CLC1out
+0176  0E24     MOVLW 0x24
+0178  6F77     MOVWF 0x77, BANKED
+122:           
+123:           	CLC1GLS0 = 0x02; //LC1G1:CLK = CLC1D1
+017A  0E02     MOVLW 0x2
+017C  6F7A     MOVWF 0x7A, BANKED
+124:           	CLC1GLS1 = 0x04; //LC1G2:DIN = !CLC1D2
+017E  0E04     MOVLW 0x4
+0180  6F7B     MOVWF 0x7B, BANKED
+125:           	CLC1GLS2 = 0x00; //LC1G3:RST = 0
+0182  0E00     MOVLW 0x0
+0184  6F7C     MOVWF 0x7C, BANKED
+126:           	CLC1GLS3 = 0x00; //LC1G4:SET = 0
+0186  0E00     MOVLW 0x0
+0188  6F7D     MOVWF 0x7D, BANKED
+127:           
+128:           	CLC1CON = 0x84; //D-FF with SR
+018A  0E84     MOVLW 0x84
+018C  6F74     MOVWF 0x74, BANKED
+129:           
+130:           	TMR3H = 0;
+018E  0E00     MOVLW 0x0
+0190  013F     MOVLB 0x3F
+0192  6FA5     MOVWF 0xA5, BANKED
+131:           	TMR3L = 0;
+0194  0E00     MOVLW 0x0
+0196  6FA4     MOVWF 0xA4, BANKED
+132:           	//	T3CLK = 0x01; //FOSC/4
+133:           	T3CLK = 0x0d; //CLC1
+0198  0E0D     MOVLW 0xD
+019A  6FA9     MOVWF 0xA9, BANKED
+134:           	T3CON = 0x16; //DISABLED
+019C  0E16     MOVLW 0x16
+019E  6FA6     MOVWF 0xA6, BANKED
+135:           
+136:           	CCPTMRS0bits.C1TSEL = 0x02; //CCP1 use TMR3
+01A0  515E     MOVF 0x5E, W, BANKED
+01A2  0BFC     ANDLW 0xFC
+01A4  0902     IORLW 0x2
+01A6  6F5E     MOVWF 0x5E, BANKED
+137:           	//	CCPR1L = 0;
+138:           	//	CCPR1H = 0;
+139:           	//	CCP1CONbits.MODE = H2L;
+140:           
+141:           	//	NCO1CLK = 0xa1; //HFINTOSC 4MHz? duty
+142:           	//	NCO1CLK = 0x81; //HFINTOSC 16MHz? duty
+143:           	//	NCO1INC = 14680; //56kHz
+144:           	//	NCO1INC = 14680/4; //56*2kHz by
+145:           	//	NCO1CON = 0x80;
+146:           
+147:           	MD1CON0 = 0x90;
+01A8  0E90     MOVLW 0x90
+01AA  013C     MOVLB 0x3C
+01AC  6FFA     MOVWF 0xFA, BANKED
+148:           	MD1CON1 = 0x00;
+01AE  0E00     MOVLW 0x0
+01B0  6FFB     MOVWF 0xFB, BANKED
+149:           	MD1CON1bits.CHSYNC = 1;
+01B2  89FB     BSF 0xFB, 4, BANKED
+150:           	MD1CARL = 0x1f; //ZERO input
+01B4  0E1F     MOVLW 0x1F
+01B6  6FFD     MOVWF 0xFD, BANKED
+151:           	//	MD1CARH = 0x0e; //Sync with NCO1
+152:           	MD1CARH = 0x08; //Sync with PWM5
+01B8  0E08     MOVLW 0x8
+01BA  6FFE     MOVWF 0xFE, BANKED
+153:           	MD1SRC = 0x02; //Input is CCP1
+01BC  0E02     MOVLW 0x2
+01BE  6FFC     MOVWF 0xFC, BANKED
+154:           	MD1CARHPPS = 0x00;
+01C0  0E00     MOVLW 0x0
+01C2  013A     MOVLB 0x3A
+01C4  6FD7     MOVWF 0xD7, BANKED
+155:           
+156:           	//	RC0PPS = 0x13; //RC0 = U1TX	test pad long
+157:           	RC0PPS = 0x09; //RC0 = CCP1	test pad long
+01C6  0E09     MOVLW 0x9
+01C8  6F10     MOVWF 0x10, BANKED
+158:           	//	RC0PPS = 0x01; //RC0 = CLC1	test pad long
+159:           	RA7PPS = 0x28; //RA7 = DSM1	test pad short
+01CA  0E28     MOVLW 0x28
+01CC  6F07     MOVWF quotient, BANKED
+160:           	//		RA7PPS = 0x0d; //RA7 = PWM5	test pad short
+161:           	//	RA7PPS = 0x01; //RA7 = CLC1	test pad short
+162:           	//		RA6PPS = 0x26; //RA6 = NCO1	test pad mid
+163:           	RC2PPS = 0x28; //RC2 = DSM1	IR LED
+01CE  0E28     MOVLW 0x28
+01D0  6F12     MOVWF 0x12, BANKED
+164:           
+165:           	/* Configure the IPEN bit (1=on) in RCON to turn on/off int priorities */
+166:           
+167:           	/* Enable interrupts */
+168:           	CCPR1 = 100;
+01D2  0E00     MOVLW 0x0
+01D4  013F     MOVLB 0x3F
+01D6  6F7D     MOVWF 0x7D, BANKED
+01D8  0E64     MOVLW 0x64
+01DA  6F7C     MOVWF 0x7C, BANKED
+169:           	CCP1CONbits.MODE = TGL;
+01DC  517E     MOVF 0x7E, W, BANKED
+01DE  0BF0     ANDLW 0xF0
+01E0  0902     IORLW 0x2
+01E2  6F7E     MOVWF 0x7E, BANKED
+170:           	CCP1CONbits.EN = 1;
+01E4  8F7E     BSF 0x7E, 7, BANKED
+171:           	DMA1PR = 0;
+01E6  0E00     MOVLW 0x0
+01E8  0139     MOVLB 0x39
+01EA  6FF3     MOVWF 0xF3, BANKED
+172:           	ISRPR = 1;
+01EC  0E01     MOVLW 0x1
+01EE  6FF1     MOVWF 0xF1, BANKED
+173:           	MAINPR = 2;
+01F0  0E02     MOVLW 0x2
+01F2  6FF2     MOVWF 0xF2, BANKED
+174:           	__asm("BANKSEL PRLOCK");
+01F4  0139     MOVLB 0x39
+175:           	__asm("	MOVLW 0x55");
+01F6  0E55     MOVLW 0x55
+176:           	__asm("	MOVWF PRLOCK");
+01F8  6FEF     MOVWF 0xEF, BANKED
+177:           	__asm("MOVLW 0xAA");
+01FA  0EAA     MOVLW 0xAA
+178:           	__asm("	MOVWF PRLOCK");
+01FC  6FEF     MOVWF 0xEF, BANKED
+179:           	__asm("	BSF PRLOCK,0");
+01FE  81EF     BSF 0xEF, 0, BANKED
+180:           
+181:           }
+0200  0012     RETURN 0
+182:           
+183:           void LED(uint8_t digit, uint8_t data)
+184:           {
+185:           	LATC |= 0xe0;
+186:           	LATB = data;
+187:           	TRISB = 0x00;
+188:           	if (digit > 2)digit = 2;
+189:           	LATC &= ~(0x80 >> digit);
+190:           }
+191:           
+192:           void sendACK(uint8_t report[], uint8_t pushingCount)
+193:           {
+194:           	while (U1FIFObits.TXBF);
+195:           	U1TXB = SENDER | ACK | CRC3(0, 0);
+196:           }
+197:           
+198:           void sendReport(uint8_t report[], uint8_t pushingCount)
+199:           {
+200:           	uint16_t data[18] = {1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 60, 60, 30, 30, 60, 60, 30, 30,};
+0202  EE20     LFSR 2, 0x60
+0204  F060     NOP
+0206  EE10     LFSR 1, 0xA
+0208  F00A     NOP
+020A  0E23     MOVLW 0x23
+020E  FF6F     NOP
+0210  FFE3     NOP
+0212  06E8     DECF 0xFE8, F, ACCESS
+0214  E2FB     BC 0x20C
+201:           
+202:           	for (uint8_t c = 1; c < 18; c++) {
+0216  0E01     MOVLW 0x1
+0218  6E2E     MOVWF c, ACCESS
+021A  0E11     MOVLW 0x11
+021C  642E     CPFSGT c, ACCESS
+021E  EF13     GOTO 0x226
+0220  F001     NOP
+0222  EF15     GOTO 0x22A
+0224  F001     NOP
+0226  EF19     GOTO 0x232
+0228  F001     NOP
+022A  EF4A     GOTO 0x294
+022C  F001     NOP
+022E  EF4A     GOTO 0x294
+0230  F001     NOP
+203:           		data[c] += data[c - 1];
+0232  0EFE     MOVLW 0xFE
+0234  6E04     MOVWF 0x4, ACCESS
+0236  0EFF     MOVLW 0xFF
+0238  6E05     MOVWF counter, ACCESS
+023A  502E     MOVF c, W, ACCESS
+023C  6E06     MOVWF sign, ACCESS
+023E  6A07     CLRF quotient, ACCESS
+0240  90D8     BCF 0xFD8, 0, ACCESS
+0242  3606     RLCF sign, F, ACCESS
+0244  3607     RLCF quotient, F, ACCESS
+0246  5004     MOVF 0x4, W, ACCESS
+0248  2606     ADDWF sign, F, ACCESS
+024A  5005     MOVF counter, W, ACCESS
+024C  2207     ADDWFC quotient, F, ACCESS
+024E  0E0A     MOVLW 0xA
+0250  2406     ADDWF sign, W, ACCESS
+0252  6ED9     MOVWF 0xFD9, ACCESS
+0254  0E00     MOVLW 0x0
+0256  2007     ADDWFC quotient, W, ACCESS
+0258  6EDA     MOVWF 0xFDA, ACCESS
+025C  FF78     NOP
+025E  F008     NOP
+0262  FF74     NOP
+0264  F009     NOP
+0266  502E     MOVF c, W, ACCESS
+0268  0D02     MULLW 0x2
+026A  0E0A     MOVLW 0xA
+026C  24F3     ADDWF 0xFF3, W, ACCESS
+026E  6ED9     MOVWF 0xFD9, ACCESS
+0270  0E00     MOVLW 0x0
+0272  20F4     ADDWFC 0xFF4, W, ACCESS
+0274  6EDA     MOVWF 0xFDA, ACCESS
+0276  5008     MOVF 0x8, W, ACCESS
+0278  26DE     ADDWF 0xFDE, F, ACCESS
+027A  5009     MOVF 0x9, W, ACCESS
+027C  22DD     ADDWFC 0xFDD, F, ACCESS
+204:           	}
+027E  2A2E     INCF c, F, ACCESS
+0280  0E11     MOVLW 0x11
+0282  642E     CPFSGT c, ACCESS
+0284  EF46     GOTO 0x28C
+0286  F001     NOP
+0288  EF48     GOTO 0x290
+028A  F001     NOP
+028C  EF19     GOTO 0x232
+028E  F001     NOP
+0290  EF4A     GOTO 0x294
+0292  F001     NOP
+205:           
+206:           	DMA1CON0 = 0x00;
+0294  0E00     MOVLW 0x0
+0296  013B     MOVLB 0x3B
+0298  6FFC     MOVWF 0xFC, BANKED
+207:           	DMA1SSA = &data[1];
+029A  0E0C     MOVLW 0xC
+029C  6FF9     MOVWF 0xF9, BANKED
+029E  0E00     MOVLW 0x0
+02A0  6FFA     MOVWF 0xFA, BANKED
+02A2  0E00     MOVLW 0x0
+02A4  6FFB     MOVWF 0xFB, BANKED
+208:           	DMA1DSA = &CCPR1;
+02A6  0E3F     MOVLW 0x3F
+02A8  6FF1     MOVWF 0xF1, BANKED
+02AA  0E7C     MOVLW 0x7C
+02AC  6FF0     MOVWF 0xF0, BANKED
+209:           
+210:           	DMA1CON1 = 0x43;
+02AE  0E43     MOVLW 0x43
+02B0  6FFD     MOVWF 0xFD, BANKED
+211:           	DMA1SSZ = 20; //16
+02B2  0E00     MOVLW 0x0
+02B4  6FF8     MOVWF 0xF8, BANKED
+02B6  0E14     MOVLW 0x14
+02B8  6FF7     MOVWF 0xF7, BANKED
+212:           	DMA1DSZ = 2;
+02BA  0E00     MOVLW 0x0
+02BC  6FEF     MOVWF 0xEF, BANKED
+02BE  0E02     MOVLW 0x2
+02C0  6FEE     MOVWF 0xEE, BANKED
+213:           
+214:           	DMA1SIRQ = 35; //CCP1
+02C2  0E23     MOVLW 0x23
+02C4  6FFF     MOVWF 0xFF, BANKED
+215:           
+216:           	DMA1CON0bits.EN = 1;
+02C6  8FFC     BSF 0xFC, 7, BANKED
+217:           	DMA1CON0bits.SIRQEN = 1; //DMA START
+02C8  8DFC     BSF 0xFC, 6, BANKED
+218:           	CCPR1 = data[0];
+02CC  F02B     NOP
+02CE  FF7C     NOP
+02D2  F02F     NOP
+02D4  FF7D     NOP
+219:           	TMR3H = 0;
+02D6  0E00     MOVLW 0x0
+02D8  013F     MOVLB 0x3F
+02DA  6FA5     MOVWF 0xA5, BANKED
+220:           	TMR3L = 0;
+02DC  0E00     MOVLW 0x0
+02DE  6FA4     MOVWF 0xA4, BANKED
+221:           
+222:           	//	CCP1CONbits.EN = 1;
+223:           
+224:           	//	LATA6 = 1;
+225:           	TMR3CONbits.ON = 1; //TMR3 START
+02E0  81A6     BSF 0xA6, 0, BANKED
+226:           
+227:           	while (DMA1CON0bits.SIRQEN) {
+02E2  EF77     GOTO 0x2EE
+02E4  F001     NOP
+228:           		Nop();
+02E6  F000     NOP
+229:           		Nop();
+02E8  F000     NOP
+230:           		Nop();
+02EA  F000     NOP
+231:           		Nop();
+02EC  F000     NOP
+232:           	}
+02EE  013B     MOVLB 0x3B
+02F0  BDFC     BTFSC 0xFC, 6, BANKED
+02F2  EF7D     GOTO 0x2FA
+02F4  F001     NOP
+02F6  EF7F     GOTO 0x2FE
+02F8  F001     NOP
+02FA  EF73     GOTO 0x2E6
+02FC  F001     NOP
+233:           
+234:           	//		TMR3CONbits.ON = 0;
+235:           	//		TMR3H = 0;
+236:           	//		TMR3L = 0;
+237:           
+238:           	TMR3CONbits.ON = 0;
+02FE  013F     MOVLB 0x3F
+0300  91A6     BCF 0xA6, 0, BANKED
+239:           	//	CCP1CONbits.EN = 0;
+240:           
+241:           	//	for (uint8_t c = 0; c < pushingCount; c++) {
+242:           	//		while (U1FIFObits.TXBF);
+243:           	//		U1TXB = report[c];
+244:           	//	}
+245:           
+246:           	//	LATA6 = 0;
+247:           }
+0302  0012     RETURN 0
+248:           
+249:           uint8_t CRC3(uint8_t data, uint8_t dataLength)
+250:           {
+251:           	return 0x02;
+252:           	CRCXOR = 0x0000;
+253:           	CRCCON0 = 0x90;
+254:           	CRCCON1 = 0x03 | (dataLength << 4);
+255:           
+256:           	return data & 0x07;
+257:           };
+---  C:/Users/imada/OneDrive/Documents/MPLAB X/IR_Splitted_KB/IR_Splitted_Slave.X/system.c  -------------
+1:             /******************************************************************************/
+2:             /*Files to Include                                                            */
+3:             /******************************************************************************/
+4:             
+5:                 #include <xc.h>         /* XC8 General Include File */
+6:             
+7:             #include <stdint.h>         /* For uint8_t definition */
+8:             #include <stdbool.h>        /* For true/false definition */
+9:             
+10:            #include "system.h"
+11:            
+12:            /* Refer to the device datasheet for information about available
+13:            oscillator configurations. */
+14:            void ConfigureOscillator(void)
+15:            {
+16:                /* TODO Add clock switching code if appropriate.  */
+17:            
+18:                /* Typical actions in this function are to tweak the oscillator tuning
+19:                register, select new clock sources, and to wait until new clock sources
+20:                are stable before resuming execution of the main project. */
+21:            	
+22:            	OSCCON1bits.NDIV = 0;
+04A2  0139     MOVLB 0x39
+04A4  91D9     BCF 0xD9, 0, BANKED
+04A6  93D9     BCF 0xD9, 1, BANKED
+04A8  95D9     BCF 0xD9, 2, BANKED
+04AA  97D9     BCF 0xD9, 3, BANKED
+23:            //	OSCFRQ = 0x05; //16MHz
+24:            	OSCFRQ = 0x06; //32MHz
+04AC  0E06     MOVLW 0x6
+04AE  6FDF     MOVWF 0xDF, BANKED
+25:            //	OSCFRQ = 0x08; //64MHz
+26:            }
+04B0  0012     RETURN 0
+04C4  00FF     RESET
+---  C:/Users/imada/OneDrive/Documents/MPLAB X/IR_Splitted_KB/IR_Splitted_Slave.X/main.c  ---------------
+1:             /******************************************************************************/
+2:             /* Files to Include                                                           */
+3:             /******************************************************************************/
+4:             
+5:             #include <xc.h>        /* XC8 General Include File */
+6:             
+7:             #include <stdint.h>        /* For uint8_t definition */
+8:             #include <stdbool.h>       /* For true/false definition */
+9:             
+10:            #include "system.h"        /* System funct/params, like osc/peripheral config */
+11:            #include "user.h"          /* User funct/params, such as InitApp */
+12:            #include "swMatrix.h"          /* User funct/params, such as InitApp */
+13:            
+14:            /******************************************************************************/
+15:            /* User Global Variable Declaration                                           */
+16:            /******************************************************************************/
+17:            
+18:            /* i.e. uint8_t <variable_name>; */
+19:            
+20:            /******************************************************************************/
+21:            /* Main Program                                                               */
+22:            
+23:            /******************************************************************************/
+24:            
+25:            void main(void)
+26:            {
+27:            	/* Configure the oscillator for the device */
+28:            	ConfigureOscillator();
+0454  EC51     CALL 0x4A2, 0
+0456  F002     NOP
+29:            
+30:            	/* Initialize I/O and Peripherals for application */
+31:            	InitApp();
+0458  EC59     CALL 0xB2, 0
+045A  F000     NOP
+045C  EF30     GOTO 0x460
+045E  F002     NOP
+32:            
+33:            	/* TODO <INSERT USER APPLICATION CODE HERE> */
+34:            
+35:            //	LATC3 = 0;	//ALWAYS ENABLE TRANCEIVER
+36:            	
+37:            	while (1) {
+38:            //		swProcess();
+39:            		sendReport(report,n);
+0460  0E4F     MOVLW 0x4F
+0462  6E01     MOVWF __pcstackCOMRAM, ACCESS
+0464  0E00     MOVLW 0x0
+0466  6E02     MOVWF 0x2, ACCESS
+046A  F138     NOP
+046C  F003     NOP
+046E  EC01     CALL 0x202, 0
+0470  F001     NOP
+0472  EF30     GOTO 0x460
+0474  F002     NOP
+40:            //		if (lastPush != 0xff) {
+41:            //			LED(1, bin2seg7[mSw[lastPush].num/10]);
+42:            //			Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+43:            //			Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+44:            //			Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+45:            //			Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+46:            //			LED(2, bin2seg7[mSw[lastPush].num%10]);
+47:            //			Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+48:            //			Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+49:            //			Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+50:            //			Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+51:            //		} else {
+52:            //			LED(1, 0b00010000);
+53:            //			Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+54:            //			Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+55:            //			Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+56:            //			Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+57:            //			LED(2, 0b00010000);
+58:            //			Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+59:            //			Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+60:            //			Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+61:            //			Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+62:            //		}	
+63:            //		LED(0, ~(0xff>>n));
+64:            //		Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+65:            //		Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+66:            //		Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+67:            //		Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();Nop();
+68:            	}
+0476  EF30     GOTO 0x460
+0478  F002     NOP
+69:            }
+047A  EF57     GOTO 0xAE
+047C  F000     NOP
+70:            
+---  C:/Users/imada/OneDrive/Documents/MPLAB X/IR_Splitted_KB/IR_Splitted_Slave.X/interrupts.c  ---------
+1:             /******************************************************************************/
+2:             /*Files to Include                                                            */
+3:             /******************************************************************************/
+4:             
+5:             #include <xc.h>         /* XC8 General Include File */
+6:             #include <stdint.h>         /* For uint8_t definition */
+7:             #include <stdbool.h>        /* For true/false definition */
+8:             
+9:             /******************************************************************************/
+10:            /* Interrupt Routines                                                         */
+11:            /******************************************************************************/
+12:            
+13:            // High-priority
+14:            void __interrupt(irq(SWINT),low_priority) SWINT_ISR(void)
+15:            {
+16:            //	SWIF = 0;
+17:            	Reset();
+04C4  00FF     RESET
+18:            }
+04C6  0011     RETFIE 1
+19:            
+20:            void __interrupt(irq(U1RX)) U1RX_ISR(void)
+21:            {
+22:            	U1RXIF = 0;
+04B4  0139     MOVLB 0x39
+04B6  97A3     BCF 0xA3, 3, BANKED
+23:            }
+04B8  0011     RETFIE 1
+24:            
+25:            void __interrupt(irq(U1TX)) U1TX_ISR(void)
+26:            {
+27:            	U1TXIF = 0;
+04BC  0139     MOVLB 0x39
+04BE  99A3     BCF 0xA3, 4, BANKED
+28:            }
+04C0  0011     RETFIE 1
+29:            
+30:            // Default ISR for all unhandled interrupts with IVTBASE=default (0x0008)
+31:            void __interrupt(irq(default)) DEFAULT_ISR(void)
+32:            {
+33:            	// Unhandled interrupt code
+34:            	Reset();
+04C8  00FF     RESET
+35:            }
+04CA  0011     RETFIE 1
+---  C:/Program Files (x86)/Microchip/xc8/v2.00/pic/sources/c99/common/awdiv.c  -------------------------
+1:             // integer signed division
+2:             
+3:             signed int
+4:             #ifdef __PICC__
+5:             __awdiv(signed int divisor, signed int dividend)
+6:             #else
+7:             __awdiv(signed int dividend, signed int divisor)
+8:             #endif
+9:             {
+10:            	signed int	quotient;
+11:            	unsigned char	counter, sign;
+12:            
+13:            	sign = 0;
+0304  0E00     MOVLW 0x0
+0306  6E06     MOVWF sign, ACCESS
+14:            	if(divisor < 0) {
+0308  BE04     BTFSC 0x4, 7, ACCESS
+030A  EF8B     GOTO 0x316
+030C  F001     NOP
+030E  EF89     GOTO 0x312
+0310  F001     NOP
+0312  EF93     GOTO 0x326
+0314  F001     NOP
+15:            		divisor = -divisor;
+0316  6C03     NEGF pushingCount, ACCESS
+0318  1E04     COMF 0x4, F, ACCESS
+031A  B0D8     BTFSC 0xFD8, 0, ACCESS
+031C  2A04     INCF 0x4, F, ACCESS
+16:            		sign = 1;
+031E  0E01     MOVLW 0x1
+0320  6E06     MOVWF sign, ACCESS
+0322  EF93     GOTO 0x326
+0324  F001     NOP
+17:            	}
+18:            	if(dividend < 0) {
+0326  BE02     BTFSC 0x2, 7, ACCESS
+0328  EF9A     GOTO 0x334
+032A  F001     NOP
+032C  EF98     GOTO 0x330
+032E  F001     NOP
+0330  EFA2     GOTO 0x344
+0332  F001     NOP
+19:            		dividend = -dividend;
+0334  6C01     NEGF __pcstackCOMRAM, ACCESS
+0336  1E02     COMF 0x2, F, ACCESS
+0338  B0D8     BTFSC 0xFD8, 0, ACCESS
+033A  2A02     INCF 0x2, F, ACCESS
+20:            		sign ^= 1;
+033C  0E01     MOVLW 0x1
+033E  1A06     XORWF sign, F, ACCESS
+0340  EFA2     GOTO 0x344
+0342  F001     NOP
+21:            	}
+22:            	quotient = 0;
+0344  0E00     MOVLW 0x0
+0346  6E08     MOVWF 0x8, ACCESS
+0348  0E00     MOVLW 0x0
+034A  6E07     MOVWF quotient, ACCESS
+23:            	if(divisor != 0) {
+034C  5003     MOVF pushingCount, W, ACCESS
+034E  1004     IORWF 0x4, W, ACCESS
+0350  B4D8     BTFSC 0xFD8, 2, ACCESS
+0352  EFAD     GOTO 0x35A
+0354  F001     NOP
+0356  EFAF     GOTO 0x35E
+0358  F001     NOP
+035A  EFE3     GOTO 0x3C6
+035C  F001     NOP
+24:            		counter = 1;
+035E  0E01     MOVLW 0x1
+0360  6E05     MOVWF counter, ACCESS
+25:            		while((divisor & 0x8000U) == 0) {
+0362  EFB9     GOTO 0x372
+0364  F001     NOP
+26:            			divisor <<= 1;
+0366  90D8     BCF 0xFD8, 0, ACCESS
+0368  3603     RLCF pushingCount, F, ACCESS
+036A  3604     RLCF 0x4, F, ACCESS
+27:            			counter++;
+036C  2A05     INCF counter, F, ACCESS
+036E  EFB9     GOTO 0x372
+0370  F001     NOP
+28:            		}
+0372  AE04     BTFSS 0x4, 7, ACCESS
+0374  EFBE     GOTO 0x37C
+0376  F001     NOP
+0378  EFC0     GOTO 0x380
+037A  F001     NOP
+037C  EFB3     GOTO 0x366
+037E  F001     NOP
+0380  EFC4     GOTO 0x388
+0382  F001     NOP
+0384  EFC4     GOTO 0x388
+0386  F001     NOP
+29:            		do {
+30:            			quotient <<= 1;
+0388  90D8     BCF 0xFD8, 0, ACCESS
+038A  3607     RLCF quotient, F, ACCESS
+038C  3608     RLCF 0x8, F, ACCESS
+31:            			if((unsigned int)divisor <= (unsigned int)dividend) {
+038E  5003     MOVF pushingCount, W, ACCESS
+0390  5C01     SUBWF __pcstackCOMRAM, W, ACCESS
+0392  5004     MOVF 0x4, W, ACCESS
+0394  5802     SUBWFB 0x2, W, ACCESS
+0396  A0D8     BTFSS 0xFD8, 0, ACCESS
+0398  EFD0     GOTO 0x3A0
+039A  F001     NOP
+039C  EFD2     GOTO 0x3A4
+039E  F001     NOP
+03A0  EFD9     GOTO 0x3B2
+03A2  F001     NOP
+32:            				dividend -= divisor;
+03A4  5003     MOVF pushingCount, W, ACCESS
+03A6  5E01     SUBWF __pcstackCOMRAM, F, ACCESS
+03A8  5004     MOVF 0x4, W, ACCESS
+03AA  5A02     SUBWFB 0x2, F, ACCESS
+33:            				quotient |= 1;
+03AC  8007     BSF quotient, 0, ACCESS
+03AE  EFD9     GOTO 0x3B2
+03B0  F001     NOP
+34:            			}
+35:            			*(unsigned int *)&divisor >>= 1;
+03B2  90D8     BCF 0xFD8, 0, ACCESS
+03B4  3204     RRCF 0x4, F, ACCESS
+03B6  3203     RRCF pushingCount, F, ACCESS
+36:            		} while(--counter != 0);
+03B8  2E05     DECFSZ counter, F, ACCESS
+03BA  EFC4     GOTO 0x388
+03BC  F001     NOP
+03BE  EFE3     GOTO 0x3C6
+03C0  F001     NOP
+03C2  EFE3     GOTO 0x3C6
+03C4  F001     NOP
+37:            	}
+38:            	if(sign)
+03C6  5006     MOVF sign, W, ACCESS
+03C8  B4D8     BTFSC 0xFD8, 2, ACCESS
+03CA  EFE9     GOTO 0x3D2
+03CC  F001     NOP
+03CE  EFEB     GOTO 0x3D6
+03D0  F001     NOP
+03D2  EFF1     GOTO 0x3E2
+03D4  F001     NOP
+39:            		quotient = -quotient;
+03D6  6C07     NEGF quotient, ACCESS
+03D8  1E08     COMF 0x8, F, ACCESS
+03DA  B0D8     BTFSC 0xFD8, 0, ACCESS
+03DC  2A08     INCF 0x8, F, ACCESS
+03DE  EFF1     GOTO 0x3E2
+03E0  F001     NOP
+40:            	return quotient;
+03E4  F01C     NOP
+03E6  F001     NOP
+03EA  F020     NOP
+03EC  F002     NOP
+03EE  EFF9     GOTO 0x3F2
+03F0  F001     NOP
+41:            }
+03F2  0012     RETURN 0

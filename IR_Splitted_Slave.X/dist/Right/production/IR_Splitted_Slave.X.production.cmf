@@ -1,0 +1,1476 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/Right/production\IR_Splitted_Slave.X.production.o
+ivt0x8 CODE 0 8 8 A6 1
+cinit CODE 0 1930 1930 72 1
+text0 CODE 0 54E 54E 440 1
+text1 CODE 0 98E 98E 386 1
+text2 CODE 0 172E 172E 8C 1
+text3 CODE 0 1AF8 1AF8 44 1
+text4 CODE 0 19A2 19A2 62 1
+text5 CODE 0 1C58 1C58 14 1
+text6 CODE 0 1B78 1B78 36 1
+text7 CODE 0 1C26 1C26 1A 1
+text8 CODE 0 1C40 1C40 18 1
+text9 CODE 0 1600 1600 9A 1
+text10 CODE 0 150E 150E F2 1
+text11 CODE 0 1A58 1A58 50 1
+text12 CODE 0 1B3C 1B3C 3C 1
+text13 CODE 0 1C0A 1C0A 1C 1
+text14 CODE 0 1BE6 1BE6 24 1
+text15 CODE 0 17BA 17BA 86 1
+text16 CODE 0 1A04 1A04 54 1
+text17 CODE 0 1C6C 1C6C 10 1
+text18 CODE 0 1C7C 1C7C 8 1
+text19 CODE 0 1C84 1C84 8 1
+text20 CODE 0 F60 F60 21E 1
+text21 CODE 0 1AA8 1AA8 50 1
+text22 CODE 0 1840 1840 7A 1
+text23 CODE 0 D14 D14 24A 1
+text24 CODE 0 1BB0 1BB0 36 1
+text25 CODE 0 18BC 18BC 74 1
+text26 CODE 0 B2 B2 49C 1
+text27 CODE 0 117E 117E 1DC 1
+text28 CODE 0 135A 135A 1B4 1
+text29 CODE 0 169A 169A 94 1
+text30 CODE 0 1C8C 1C8C 8 1
+text31 CODE 0 1C9C 1C9C 6 1
+text32 CODE 0 1C94 1C94 8 1
+idataCOMRAM CODE 0 1CA2 1CA2 2 1
+cstackCOMRAM COMRAM 1 23 23 22 1
+cstackBANK0 BANK0 1 60 60 36 1
+cstackBANK2 BANK2 1 200 200 36 1
+bssBANK0 BANK0 1 96 96 27 1
+bssBANK1 BANK1 1 100 100 100 1
+idataBANK0 CODE 0 1CA4 1CA4 1 1
+dataBANK0 BANK0 1 BD BD 1 1
+dataCOMRAM COMRAM 1 45 45 2 1
+bssCOMRAM COMRAM 1 1 1 22 1
+mediumconst MEDIUMCONST 0 7DE8 7DE8 218 1
+$C:\Users\imada\AppData\Local\Temp\s3l0.o
+idloc IDLOC 0 200000 200000 10 1
+init CODE 0 AE AE 4 1
+reset_vec CODE 0 0 0 4 1
+config CONFIG 0 300000 300000 A 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM BE-FF 1
+RAM 236-7FF 1
+SFR 3800-3FFF 1
+BANK0 BE-FF 1
+BANK2 236-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+CONST 4-7 1
+CONST F5E-F5F 1
+CONST 18BA-18BB 1
+CONST 1BAE-1BAF 1
+CONST 1CA5-7DE7 1
+STACK 236-7FF 1
+SMALLCONST F5E-F5F 1
+SMALLCONST 18BA-18BB 1
+SMALLCONST 1BAE-1BAF 1
+SMALLCONST 1CA5-7DE7 1
+CODE 4-7 1
+CODE F5E-F5F 1
+CODE 18BA-18BB 1
+CODE 1BAE-1BAF 1
+CODE 1CA5-7DE7 1
+BIGRAM 47-5F 1
+BIGRAM BE-FF 1
+BIGRAM 236-7FF 1
+COMRAM 47-5F 1
+EEDATA 310000-3100FF 1
+MEDIUMCONST F5E-F5F 1
+MEDIUMCONST 18BA-18BB 1
+MEDIUMCONST 1BAE-1BAF 1
+MEDIUMCONST 1CA5-7DE7 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/Right/production\IR_Splitted_Slave.X.production.o
+1C94 text32 CODE >212:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C94 text32 CODE >214:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C94 text32 CODE >216:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C98 text32 CODE >218:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C9A text32 CODE >219:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C9C text31 CODE >205:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C9C text31 CODE >207:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C9C text31 CODE >209:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1CA0 text31 CODE >212:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C8C text30 CODE >199:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C8C text30 CODE >202:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C8C text30 CODE >261:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C92 text30 CODE >205:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+169A text29 CODE >251:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+169E text29 CODE >253:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+16A4 text29 CODE >254:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+16D2 text29 CODE >255:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+16D8 text29 CODE >256:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+16DE text29 CODE >257:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+16E4 text29 CODE >258:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+16E8 text29 CODE >259:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1702 text29 CODE >260:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+172C text29 CODE >261:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+135A text28 CODE >112:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+135E text28 CODE >115:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+137C text28 CODE >116:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+13AA text28 CODE >117:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+13AE text28 CODE >118:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+13AE text28 CODE >119:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+13C4 text28 CODE >120:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+13E0 text28 CODE >121:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1408 text28 CODE >122:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1426 text28 CODE >123:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+143A text28 CODE >124:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1456 text28 CODE >125:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1472 text28 CODE >126:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1482 text28 CODE >127:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1488 text28 CODE >128:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+14A4 text28 CODE >129:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+14A8 text28 CODE >130:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+14C6 text28 CODE >131:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+14E8 text28 CODE >132:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+14E8 text28 CODE >133:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+14F2 text28 CODE >134:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+14F6 text28 CODE >135:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+14F6 text28 CODE >136:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+150C text28 CODE >137:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+117E text27 CODE >88:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1182 text27 CODE >90:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+11A0 text27 CODE >91:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+11BC text27 CODE >93:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+11E4 text27 CODE >94:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1200 text27 CODE >95:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1210 text27 CODE >96:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1230 text27 CODE >97:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1230 text27 CODE >98:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1234 text27 CODE >99:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+128A text27 CODE >100:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+128A text27 CODE >102:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+12B2 text27 CODE >103:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+12CE text27 CODE >104:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+12DE text27 CODE >105:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+12FE text27 CODE >106:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+12FE text27 CODE >107:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1302 text27 CODE >108:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1358 text27 CODE >109:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1358 text27 CODE >110:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+B2 text26 CODE >139:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+B2 text26 CODE >141:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+B8 text26 CODE >142:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+BA text26 CODE >148:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+C0 text26 CODE >149:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+C4 text26 CODE >150:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+C6 text26 CODE >154:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+E4 text26 CODE >155:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+EA text26 CODE >156:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+EC text26 CODE >157:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+F0 text26 CODE >159:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+10A text26 CODE >160:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+10C text26 CODE >161:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+10E text26 CODE >162:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+110 text26 CODE >163:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+112 text26 CODE >164:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+12C text26 CODE >166:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+144 text26 CODE >168:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+14A text26 CODE >169:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+150 text26 CODE >170:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+156 text26 CODE >172:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+174 text26 CODE >173:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+188 text26 CODE >174:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+18C text26 CODE >175:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+190 text26 CODE >176:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+19E text26 CODE >177:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1AE text26 CODE >178:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1AE text26 CODE >179:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1B4 text26 CODE >180:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1BA text26 CODE >175:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1BA text26 CODE >181:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1CE text26 CODE >182:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1E4 text26 CODE >183:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+1E8 text26 CODE >185:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+204 text26 CODE >186:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+218 text26 CODE >187:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+232 text26 CODE >188:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+232 text26 CODE >189:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+238 text26 CODE >191:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+256 text26 CODE >192:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+27E text26 CODE >193:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+2FA text26 CODE >195:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+31C text26 CODE >196:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+344 text26 CODE >197:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+364 text26 CODE >198:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+364 text26 CODE >199:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+368 text26 CODE >200:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+37E text26 CODE >201:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+37E text26 CODE >202:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+382 text26 CODE >204:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+3A2 text26 CODE >205:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+3BE text26 CODE >206:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+3C4 text26 CODE >207:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+3C8 text26 CODE >208:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+3EC text26 CODE >209:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+400 text26 CODE >210:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+41C text26 CODE >211:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+420 text26 CODE >212:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+436 text26 CODE >213:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+43A text26 CODE >214:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+43E text26 CODE >215:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+442 text26 CODE >216:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+442 text26 CODE >217:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+456 text26 CODE >219:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+45C text26 CODE >220:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+460 text26 CODE >222:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+464 text26 CODE >223:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+48C text26 CODE >224:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+49C text26 CODE >225:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+4D0 text26 CODE >226:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+4D4 text26 CODE >227:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+4D4 text26 CODE >228:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+4F4 text26 CODE >222:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+4F4 text26 CODE >229:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+504 text26 CODE >231:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+50A text26 CODE >234:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+522 text26 CODE >235:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+536 text26 CODE >236:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+54C text26 CODE >237:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\swMatrix.c
+18BC text25 CODE >183:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+18BC text25 CODE >186:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+18D4 text25 CODE >190:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+18D8 text25 CODE >191:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+18DC text25 CODE >192:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+18F8 text25 CODE >193:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+18FA text25 CODE >194:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1912 text25 CODE >196:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1916 text25 CODE >197:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1BB0 text24 CODE >169:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1BB0 text24 CODE >171:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1BB0 text24 CODE >173:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1BB4 text24 CODE >175:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1BB8 text24 CODE >176:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1BBA text24 CODE >177:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1BC8 text24 CODE >178:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1BDA text24 CODE >179:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1BDE text24 CODE >180:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1BE0 text24 CODE >182:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1BE4 text24 CODE >183:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+D14 text23 CODE >129:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul32.c
+D14 text23 CODE >112:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+D14 text23 CODE >113:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+D18 text23 CODE >115:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+D28 text23 CODE >116:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+D2A text23 CODE >119:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+D2E text23 CODE >121:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+D3E text23 CODE >122:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+D82 text23 CODE >128:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+D9E text23 CODE >130:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+DA0 text23 CODE >132:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+DC2 text23 CODE >133:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+DC6 text23 CODE >134:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+DE8 text23 CODE >135:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+DEC text23 CODE >136:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+E0E text23 CODE >137:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+E12 text23 CODE >138:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+E34 text23 CODE >139:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+E38 text23 CODE >140:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+E5A text23 CODE >141:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+E5E text23 CODE >142:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+E80 text23 CODE >143:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+E84 text23 CODE >144:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+EA6 text23 CODE >145:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+EAA text23 CODE >146:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+ECC text23 CODE >147:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+ED0 text23 CODE >148:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+EF2 text23 CODE >150:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+EF4 text23 CODE >153:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+EF8 text23 CODE >156:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+F00 text23 CODE >158:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+F24 text23 CODE >159:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+F3C text23 CODE >160:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+F3C text23 CODE >162:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+F40 text23 CODE >163:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+F4E text23 CODE >164:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+F52 text23 CODE >165:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+F54 text23 CODE >166:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+F58 text23 CODE >168:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+F5C text23 CODE >169:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1840 text22 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul32.c
+1840 text22 CODE >119:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul32.c
+1854 text22 CODE >120:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul32.c
+1854 text22 CODE >121:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul32.c
+1862 text22 CODE >122:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul32.c
+1876 text22 CODE >123:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul32.c
+1880 text22 CODE >124:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul32.c
+188A text22 CODE >125:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul32.c
+18A0 text22 CODE >128:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul32.c
+18B8 text22 CODE >129:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul32.c
+1AA8 text21 CODE >24:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\ringBuffer.c
+1AA8 text21 CODE >26:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\ringBuffer.c
+1AF6 text21 CODE >27:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\ringBuffer.c
+F60 text20 CODE >46:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+F60 text20 CODE >48:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+F60 text20 CODE >49:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+F64 text20 CODE >51:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+F74 text20 CODE >52:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+F76 text20 CODE >55:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+F7A text20 CODE >57:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+F8A text20 CODE >58:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+FCE text20 CODE >64:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+FEA text20 CODE >66:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+FEC text20 CODE >68:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+100E text20 CODE >69:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1012 text20 CODE >70:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1034 text20 CODE >71:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1038 text20 CODE >72:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+105A text20 CODE >73:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+105E text20 CODE >74:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1080 text20 CODE >75:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1084 text20 CODE >76:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+10A6 text20 CODE >77:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+10AA text20 CODE >78:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+10CC text20 CODE >79:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+10D0 text20 CODE >80:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+10F2 text20 CODE >81:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+10F6 text20 CODE >82:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1118 text20 CODE >83:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+111C text20 CODE >84:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1120 text20 CODE >86:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1128 text20 CODE >94:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1148 text20 CODE >95:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+115C text20 CODE >102:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+116A text20 CODE >103:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+116E text20 CODE >104:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1170 text20 CODE >105:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1172 text20 CODE >106:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1174 text20 CODE >107:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1178 text20 CODE >109:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+117C text20 CODE >110:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C84 text19 CODE >28:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C84 text19 CODE >41:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C84 text19 CODE >43:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C88 text19 CODE >45:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C8A text19 CODE >46:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C7C text18 CODE >23:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C7C text18 CODE >25:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C7C text18 CODE >26:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\system.c
+1C80 text18 CODE >27:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C82 text18 CODE >28:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\interrupts.c
+1C6C text17 CODE >14:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\system.c
+1C6C text17 CODE >22:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\system.c
+1C76 text17 CODE >24:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\system.c
+1C7A text17 CODE >26:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\system.c
+1A04 text16 CODE >29:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\ringBuffer.c
+1A04 text16 CODE >33:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\ringBuffer.c
+1A50 text16 CODE >41:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\ringBuffer.c
+1A56 text16 CODE >42:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\ringBuffer.c
+17BA text15 CODE >68:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+17BA text15 CODE >73:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+17C0 text15 CODE >74:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+17C6 text15 CODE >75:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+17CA text15 CODE >76:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+17D0 text15 CODE >77:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+17D4 text15 CODE >78:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+17D8 text15 CODE >79:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+17DA text15 CODE >80:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+17DE text15 CODE >81:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+17E2 text15 CODE >83:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+17E6 text15 CODE >84:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+17EC text15 CODE >85:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+17F0 text15 CODE >86:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+17F6 text15 CODE >87:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+17FA text15 CODE >88:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+17FE text15 CODE >89:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1800 text15 CODE >90:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1804 text15 CODE >91:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1808 text15 CODE >93:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+180C text15 CODE >94:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1812 text15 CODE >95:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1816 text15 CODE >96:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+181C text15 CODE >97:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1820 text15 CODE >98:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1824 text15 CODE >99:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1826 text15 CODE >100:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+182A text15 CODE >101:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+182E text15 CODE >103:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1832 text15 CODE >104:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1836 text15 CODE >106:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+183A text15 CODE >112:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+183E text15 CODE >116:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1BE6 text14 CODE >221:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1BE6 text14 CODE >226:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1BEC text14 CODE >227:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1BF0 text14 CODE >228:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1BF4 text14 CODE >229:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1BF6 text14 CODE >230:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1BF8 text14 CODE >231:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1BFA text14 CODE >232:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1BFC text14 CODE >233:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1BFE text14 CODE >234:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C00 text14 CODE >236:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C04 text14 CODE >237:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C06 text14 CODE >238:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C08 text14 CODE >239:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C0A text13 CODE >52:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C0A text13 CODE >54:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C0E text13 CODE >55:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C10 text13 CODE >56:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C12 text13 CODE >58:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C14 text13 CODE >59:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C16 text13 CODE >60:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C18 text13 CODE >61:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C1A text13 CODE >62:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C1C text13 CODE >63:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C1E text13 CODE >64:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C20 text13 CODE >65:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C22 text13 CODE >66:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C24 text13 CODE >67:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1B3C text12 CODE >54:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\ringBuffer.c
+1B3C text12 CODE >59:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\ringBuffer.c
+1B54 text12 CODE >60:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\ringBuffer.c
+1B66 text12 CODE >61:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\ringBuffer.c
+1B76 text12 CODE >65:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\ringBuffer.c
+1A58 text11 CODE >131:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1A58 text11 CODE >133:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1A6E text11 CODE >135:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1A74 text11 CODE >136:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1A82 text11 CODE >137:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1A86 text11 CODE >138:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1A8A text11 CODE >139:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1A8E text11 CODE >140:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1A92 text11 CODE >141:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1A96 text11 CODE >142:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1A98 text11 CODE >143:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1A9A text11 CODE >144:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1A9C text11 CODE >145:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1A9E text11 CODE >146:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1AA0 text11 CODE >147:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1AA2 text11 CODE >148:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1AA4 text11 CODE >149:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1AA6 text11 CODE >150:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+150E text10 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+150E text10 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+1514 text10 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+1522 text10 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+152A text10 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+1532 text10 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+1532 text10 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+1540 text10 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+1548 text10 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+1550 text10 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+1550 text10 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+1558 text10 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+156A text10 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+156E text10 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+1572 text10 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+1578 text10 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+157E text10 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+157E text10 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+1594 text10 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+1594 text10 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+159A text10 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+15B0 text10 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+15B8 text10 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+15BE text10 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+15BE text10 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+15C4 text10 CODE >36:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+15D2 text10 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+15D2 text10 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+15E2 text10 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+15EE text10 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+15FE text10 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+1600 text9 CODE >152:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1600 text9 CODE >154:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1606 text9 CODE >155:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+160A text9 CODE >157:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+160E text9 CODE >158:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1612 text9 CODE >159:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+161A text9 CODE >160:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+161E text9 CODE >161:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+163C text9 CODE >164:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1642 text9 CODE >165:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1646 text9 CODE >166:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+164A text9 CODE >168:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+164E text9 CODE >169:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1652 text9 CODE >170:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1656 text9 CODE >171:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+165A text9 CODE >173:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+165E text9 CODE >187:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1664 text9 CODE >188:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1668 text9 CODE >190:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+166C text9 CODE >191:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1670 text9 CODE >193:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1678 text9 CODE >209:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+167E text9 CODE >210:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1682 text9 CODE >212:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1686 text9 CODE >214:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+168A text9 CODE >215:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+168E text9 CODE >216:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1694 text9 CODE >218:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1698 text9 CODE >219:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C40 text8 CODE >118:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C40 text8 CODE >122:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C46 text8 CODE >123:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C4A text8 CODE >124:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C4E text8 CODE >125:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C52 text8 CODE >127:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C54 text8 CODE >128:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C56 text8 CODE >129:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C26 text7 CODE >241:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C26 text7 CODE >243:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C2A text7 CODE >244:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C2E text7 CODE >245:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C32 text7 CODE >246:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C36 text7 CODE >247:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C3A text7 CODE >248:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1C3E text7 CODE >249:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+1B78 text6 CODE >209:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B78 text6 CODE >211:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B7C text6 CODE >212:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B7E text6 CODE >214:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B84 text6 CODE >215:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B88 text6 CODE >216:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B8C text6 CODE >217:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B90 text6 CODE >218:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B94 text6 CODE >219:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B98 text6 CODE >220:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B9C text6 CODE >221:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1BA0 text6 CODE >222:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1BA4 text6 CODE >223:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1BA8 text6 CODE >224:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1BAC text6 CODE >225:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1C58 text5 CODE >198:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1C58 text5 CODE >199:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1C5C text5 CODE >200:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1C5E text5 CODE >201:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1C60 text5 CODE >202:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1C62 text5 CODE >203:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1C64 text5 CODE >204:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1C66 text5 CODE >205:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1C68 text5 CODE >206:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1C6A text5 CODE >207:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+19A2 text4 CODE >180:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+19A6 text4 CODE >182:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+19B8 text4 CODE >183:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+19BC text4 CODE >184:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+19BE text4 CODE >185:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+19D4 text4 CODE >186:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+19E8 text4 CODE >187:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+19EC text4 CODE >188:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+19F2 text4 CODE >189:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+19F2 text4 CODE >190:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+19F6 text4 CODE >191:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+19FA text4 CODE >192:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1A02 text4 CODE >195:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1A02 text4 CODE >196:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1AF8 text3 CODE >227:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1AF8 text3 CODE >229:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1AFC text3 CODE >230:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B00 text3 CODE >231:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B04 text3 CODE >232:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B0A text3 CODE >235:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B10 text3 CODE >236:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B14 text3 CODE >237:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B16 text3 CODE >238:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B1A text3 CODE >239:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B1E text3 CODE >240:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B22 text3 CODE >242:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B26 text3 CODE >243:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B28 text3 CODE >244:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B2C text3 CODE >246:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B2E text3 CODE >247:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B30 text3 CODE >249:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B36 text3 CODE >251:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1B3A text3 CODE >252:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+172E text2 CODE >5:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB/IR_format.c
+1732 text2 CODE >7:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB/IR_format.c
+1738 text2 CODE >9:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB/IR_format.c
+1742 text2 CODE >10:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB/IR_format.c
+1756 text2 CODE >11:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB/IR_format.c
+1772 text2 CODE >13:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB/IR_format.c
+1782 text2 CODE >14:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB/IR_format.c
+17B8 text2 CODE >15:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB/IR_format.c
+98E text1 CODE >270:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+992 text1 CODE >275:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+996 text1 CODE >276:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+998 text1 CODE >277:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+99A text1 CODE >279:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+9C2 text1 CODE >280:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+9C4 text1 CODE >281:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+9E4 text1 CODE >284:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+A02 text1 CODE >287:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+A0A text1 CODE >288:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+A98 text1 CODE >289:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+B34 text1 CODE >290:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+B56 text1 CODE >292:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+BDE text1 CODE >294:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+C4A text1 CODE >297:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+C50 text1 CODE >298:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+C5C text1 CODE >299:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+C64 text1 CODE >300:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+C68 text1 CODE >301:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+C7C text1 CODE >302:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+C84 text1 CODE >304:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+C88 text1 CODE >306:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+C92 text1 CODE >307:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+C94 text1 CODE >308:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+C96 text1 CODE >310:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+C98 text1 CODE >311:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+C9C text1 CODE >312:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+C9E text1 CODE >314:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+CA0 text1 CODE >315:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+CA4 text1 CODE >317:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+CA6 text1 CODE >318:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+CAA text1 CODE >319:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+CAC text1 CODE >320:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+CB6 text1 CODE >321:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+CB8 text1 CODE >322:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+CC0 text1 CODE >324:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+CC2 text1 CODE >326:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+CC6 text1 CODE >329:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+CCC text1 CODE >330:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+CCE text1 CODE >331:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+CD0 text1 CODE >332:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+CD2 text1 CODE >334:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+CE4 text1 CODE >336:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+CE8 text1 CODE >338:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+CEC text1 CODE >341:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+CEE text1 CODE >342:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+D00 text1 CODE >344:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+D02 text1 CODE >346:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+D06 text1 CODE >347:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+D08 text1 CODE >348:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+D0A text1 CODE >355:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+D0C text1 CODE >362:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+D10 text1 CODE >363:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+D12 text1 CODE >364:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\user.c
+54E text0 CODE >56:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+54E text0 CODE >58:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+552 text0 CODE >61:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+556 text0 CODE >64:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+55E text0 CODE >69:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+55E text0 CODE >71:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+564 text0 CODE >76:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+576 text0 CODE >77:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+586 text0 CODE >78:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+58C text0 CODE >79:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+590 text0 CODE >80:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+592 text0 CODE >81:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+596 text0 CODE >82:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+59A text0 CODE >83:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+5A0 text0 CODE >84:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+5A4 text0 CODE >85:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+5AC text0 CODE >86:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+5AC text0 CODE >87:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+5B0 text0 CODE >88:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+5B4 text0 CODE >89:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+5BA text0 CODE >90:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+5BA text0 CODE >92:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+5CC text0 CODE >93:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+5D0 text0 CODE >94:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+5DA text0 CODE >95:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+5DA text0 CODE >103:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+5DE text0 CODE >104:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+5F0 text0 CODE >106:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+600 text0 CODE >107:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+612 text0 CODE >108:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+620 text0 CODE >109:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+63A text0 CODE >110:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+63E text0 CODE >111:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+662 text0 CODE >112:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+662 text0 CODE >113:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+67E text0 CODE >114:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+67E text0 CODE >115:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+696 text0 CODE >117:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+6B2 text0 CODE >118:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+6C6 text0 CODE >119:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+6DC text0 CODE >120:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+6E2 text0 CODE >121:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+6E6 text0 CODE >123:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+6FE text0 CODE >125:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+70E text0 CODE >126:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+736 text0 CODE >127:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+75C text0 CODE >128:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+7BC text0 CODE >129:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+7C0 text0 CODE >130:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+7C0 text0 CODE >132:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+7C4 text0 CODE >134:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+7CA text0 CODE >135:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+7CE text0 CODE >136:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+7CE text0 CODE >138:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+80A text0 CODE >139:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+80E text0 CODE >140:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+840 text0 CODE >141:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+848 text0 CODE >143:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+848 text0 CODE >144:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+850 text0 CODE >146:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+850 text0 CODE >147:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+856 text0 CODE >148:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+85A text0 CODE >150:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+864 text0 CODE >151:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+870 text0 CODE >103:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+870 text0 CODE >152:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+886 text0 CODE >154:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+898 text0 CODE >155:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+89C text0 CODE >156:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+8BE text0 CODE >159:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+8C2 text0 CODE >160:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+8E0 text0 CODE >161:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+906 text0 CODE >162:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+918 text0 CODE >163:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+91C text0 CODE >165:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+932 text0 CODE >166:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+944 text0 CODE >167:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+94A text0 CODE >168:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+94E text0 CODE >169:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+952 text0 CODE >170:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+952 text0 CODE >171:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+964 text0 CODE >172:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+974 text0 CODE >173:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+978 text0 CODE >174:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+97E text0 CODE >175:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+982 text0 CODE >176:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+986 text0 CODE >177:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+98A text0 CODE >178:C:\Users\imada\OneDrive\Documents\MPLAB X\IR_Splitted_KB\IR_Splitted_Slave.X\main.c
+1930 cinit CODE >12503:C:\Users\imada\AppData\Local\Temp\s3l0.
+1930 cinit CODE >12505:C:\Users\imada\AppData\Local\Temp\s3l0.
+1930 cinit CODE >12508:C:\Users\imada\AppData\Local\Temp\s3l0.
+1930 cinit CODE >12575:C:\Users\imada\AppData\Local\Temp\s3l0.
+1932 cinit CODE >12576:C:\Users\imada\AppData\Local\Temp\s3l0.
+1934 cinit CODE >12577:C:\Users\imada\AppData\Local\Temp\s3l0.
+1936 cinit CODE >12578:C:\Users\imada\AppData\Local\Temp\s3l0.
+1938 cinit CODE >12579:C:\Users\imada\AppData\Local\Temp\s3l0.
+193A cinit CODE >12580:C:\Users\imada\AppData\Local\Temp\s3l0.
+193C cinit CODE >12581:C:\Users\imada\AppData\Local\Temp\s3l0.
+193E cinit CODE >12582:C:\Users\imada\AppData\Local\Temp\s3l0.
+1944 cinit CODE >12586:C:\Users\imada\AppData\Local\Temp\s3l0.
+1946 cinit CODE >12587:C:\Users\imada\AppData\Local\Temp\s3l0.
+1948 cinit CODE >12588:C:\Users\imada\AppData\Local\Temp\s3l0.
+194A cinit CODE >12589:C:\Users\imada\AppData\Local\Temp\s3l0.
+194C cinit CODE >12590:C:\Users\imada\AppData\Local\Temp\s3l0.
+194E cinit CODE >12591:C:\Users\imada\AppData\Local\Temp\s3l0.
+1950 cinit CODE >12592:C:\Users\imada\AppData\Local\Temp\s3l0.
+1952 cinit CODE >12593:C:\Users\imada\AppData\Local\Temp\s3l0.
+1958 cinit CODE >12594:C:\Users\imada\AppData\Local\Temp\s3l0.
+195A cinit CODE >12595:C:\Users\imada\AppData\Local\Temp\s3l0.
+1960 cinit CODE >12599:C:\Users\imada\AppData\Local\Temp\s3l0.
+1964 cinit CODE >12600:C:\Users\imada\AppData\Local\Temp\s3l0.
+1968 cinit CODE >12601:C:\Users\imada\AppData\Local\Temp\s3l0.
+1968 cinit CODE >12602:C:\Users\imada\AppData\Local\Temp\s3l0.
+196A cinit CODE >12603:C:\Users\imada\AppData\Local\Temp\s3l0.
+196C cinit CODE >12604:C:\Users\imada\AppData\Local\Temp\s3l0.
+196E cinit CODE >12605:C:\Users\imada\AppData\Local\Temp\s3l0.
+1970 cinit CODE >12606:C:\Users\imada\AppData\Local\Temp\s3l0.
+1972 cinit CODE >12607:C:\Users\imada\AppData\Local\Temp\s3l0.
+1974 cinit CODE >12610:C:\Users\imada\AppData\Local\Temp\s3l0.
+1978 cinit CODE >12611:C:\Users\imada\AppData\Local\Temp\s3l0.
+197A cinit CODE >12612:C:\Users\imada\AppData\Local\Temp\s3l0.
+197A cinit CODE >12613:C:\Users\imada\AppData\Local\Temp\s3l0.
+197C cinit CODE >12614:C:\Users\imada\AppData\Local\Temp\s3l0.
+197E cinit CODE >12615:C:\Users\imada\AppData\Local\Temp\s3l0.
+1980 cinit CODE >12618:C:\Users\imada\AppData\Local\Temp\s3l0.
+1984 cinit CODE >12619:C:\Users\imada\AppData\Local\Temp\s3l0.
+1986 cinit CODE >12620:C:\Users\imada\AppData\Local\Temp\s3l0.
+1986 cinit CODE >12621:C:\Users\imada\AppData\Local\Temp\s3l0.
+1988 cinit CODE >12622:C:\Users\imada\AppData\Local\Temp\s3l0.
+198A cinit CODE >12623:C:\Users\imada\AppData\Local\Temp\s3l0.
+198C cinit CODE >12631:C:\Users\imada\AppData\Local\Temp\s3l0.
+198E cinit CODE >12632:C:\Users\imada\AppData\Local\Temp\s3l0.
+1990 cinit CODE >12633:C:\Users\imada\AppData\Local\Temp\s3l0.
+1992 cinit CODE >12634:C:\Users\imada\AppData\Local\Temp\s3l0.
+1994 cinit CODE >12635:C:\Users\imada\AppData\Local\Temp\s3l0.
+1996 cinit CODE >12636:C:\Users\imada\AppData\Local\Temp\s3l0.
+1998 cinit CODE >12642:C:\Users\imada\AppData\Local\Temp\s3l0.
+1998 cinit CODE >12645:C:\Users\imada\AppData\Local\Temp\s3l0.
+199A cinit CODE >12646:C:\Users\imada\AppData\Local\Temp\s3l0.
+199C cinit CODE >12647:C:\Users\imada\AppData\Local\Temp\s3l0.
+199E cinit CODE >12648:C:\Users\imada\AppData\Local\Temp\s3l0.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___awdiv@counter 87 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__LdataBANK0 0 0 ABS 0 dataBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lmediumconst 7DE8 0 MEDIUMCONST 0 mediumconst dist/Right/production\IR_Splitted_Slave.X.production.o
+LED@data 72 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+_irRxBuffer1 100 0 BANK1 1 bssBANK1 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hspace_0 30000A 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hspace_1 236 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hspace_2 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_disableAllPMD 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_CLC1CON 3C74 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_CLC1POL 3C75 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__HidataBANK0 0 0 ABS 0 idataBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+_DMA1SCNTIF 1CD10 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_initGPIO 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PWM5CON 3F6E 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PWM5DCH 3F6D 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/Right/production\IR_Splitted_Slave.X.production.o
+__mediumconst 7DE8 0 MEDIUMCONST 0 mediumconst C:\Users\imada\AppData\Local\Temp\s3l0.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/Right/production\IR_Splitted_Slave.X.production.o
+_sw 18 0 COMRAM 1 bssCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+main@a 22C 0 BANK2 1 cstackBANK2 dist/Right/production\IR_Splitted_Slave.X.production.o
+main@b 22D 0 BANK2 1 cstackBANK2 dist/Right/production\IR_Splitted_Slave.X.production.o
+main@c 233 0 BANK2 1 cstackBANK2 dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_WDTCCS$SC 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lsmallconst 0 0 SMALLCONST 0 smallconst dist/Right/production\IR_Splitted_Slave.X.production.o
+_LATA 3FBA 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_LATB 3FBB 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_LATC 3FBC 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PIE0 3990 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PIE1 3991 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PIE2 3992 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PIE3 3993 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PIE4 3994 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PIE5 3995 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PIE6 3996 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PIE7 3997 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PIE8 3998 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PIE9 3999 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PMD0 39C0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PMD1 39C1 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PMD2 39C2 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PMD3 39C3 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PMD4 39C4 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PMD5 39C5 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PMD6 39C6 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PMD7 39C7 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_T2PR 3FAB 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_TMR2 3FAA 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_WPUA 3A41 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_WPUB 3A51 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_WPUC 3A61 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_WPUE 3A81 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\imada\AppData\Local\Temp\s3l0.o
+_main 54E 0 CODE 0 text0 dist/Right/production\IR_Splitted_Slave.X.production.o
+start AE 0 CODE 0 init C:\Users\imada\AppData\Local\Temp\s3l0.o
+main@reportCopy 22E 0 BANK2 1 cstackBANK2 dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of___awdiv 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_BOREN$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_CRCCON0 3968 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_CRCCON1 3969 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_main 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+TMR5_ISR@c 1E 0 COMRAM 1 bssCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+checksum@c 8A 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+checksum@r 8B 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_DEBUG$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+?___lmul 34 0 COMRAM 1 cstackCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_disableAllPMD 1C6C 0 CODE 0 text5 dist/Right/production\IR_Splitted_Slave.X.production.o
+_lastPush 45 0 COMRAM 1 dataCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+__LidataBANK0 0 0 ABS 0 idataBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_MCLRE$INTMCLR 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hpowerup 0 0 CODE 0 powerup dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_ConfigureOscillator 1C7C 0 CODE 0 text17 dist/Right/production\IR_Splitted_Slave.X.production.o
+_CLC1POLbits 3C75 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+__accesstop 60 0 ABS 0 - C:\Users\imada\AppData\Local\Temp\s3l0.o
+intlevel0 0 0 CODE 0 text C:\Users\imada\AppData\Local\Temp\s3l0.o
+intlevel1 0 0 CODE 0 text C:\Users\imada\AppData\Local\Temp\s3l0.o
+intlevel2 0 0 CODE 0 text C:\Users\imada\AppData\Local\Temp\s3l0.o
+intlevel3 0 0 CODE 0 text C:\Users\imada\AppData\Local\Temp\s3l0.o
+__end_of_initTransmitter 169A 0 CODE 0 text9 dist/Right/production\IR_Splitted_Slave.X.production.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+_DEFAULT_ISR 1C84 0 CODE 0 text19 dist/Right/production\IR_Splitted_Slave.X.production.o
+_InitApp 1C26 0 CODE 0 text7 dist/Right/production\IR_Splitted_Slave.X.production.o
+_initGPIO 17BA 0 CODE 0 text15 dist/Right/production\IR_Splitted_Slave.X.production.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+SMT1PRW_ISR@data 2F 0 COMRAM 1 cstackCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+SMT1PRW_ISR@diff 30 0 COMRAM 1 cstackCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hifardata 0 0 CODE 0 ifardata dist/Right/production\IR_Splitted_Slave.X.production.o
+___awdiv@sign 88 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hclrtext 0 0 ABS 0 clrtext dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_initGPIO 1840 0 CODE 0 text15 dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_bufInit 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_bufRead 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__pidataCOMRAM 1CA2 0 CODE 0 idataCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+ivt0x8_base 8 0 CODE 0 ivt0x8 dist/Right/production\IR_Splitted_Slave.X.production.o
+_ANSELA 3A40 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_ANSELB 3A50 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_ANSELC 3A60 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+checksum@data 83 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+___awdiv@dividend 83 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\imada\AppData\Local\Temp\s3l0.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\imada\AppData\Local\Temp\s3l0.o
+_bin2seg7 7FE9 0 MEDIUMCONST 0 mediumconst dist/Right/production\IR_Splitted_Slave.X.production.o
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_BORV$VBOR_190 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_CCDCON 3ABE 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_CCP1IF 1CD23 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_IVT1WAY$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_initPMD 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_CRCXOR 3966 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_countNoDreq 9C 0 BANK0 1 bssBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+main@fSendReport 232 0 BANK2 1 cstackBANK2 dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of___lmul 18BA 0 CODE 0 text22 dist/Right/production\IR_Splitted_Slave.X.production.o
+_DMA1PR 39F3 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_bufWriteIntIC1 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/Right/production\IR_Splitted_Slave.X.production.o
+_SMT1PRA_ISR D14 0 CODE 0 text23 dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_bin2seg7 7FF9 0 MEDIUMCONST 0 mediumconst dist/Right/production\IR_Splitted_Slave.X.production.o
+_SMT1PRW_ISR F60 0 CODE 0 text20 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hmediumconst 8000 0 MEDIUMCONST 0 mediumconst dist/Right/production\IR_Splitted_Slave.X.production.o
+___awdiv@divisor 85 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+_initTransmitter 1600 0 CODE 0 text9 dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of___awdiv 1600 0 CODE 0 text10 dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_FEXTOSC$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+LED@digit 76 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+_SMT1PRAIE 1CC8E 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_SMT1PRAIF 1CD0E 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_SMT1PRAIP 1CC0E 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_SMT1PWAIE 1CC8F 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_SMT1PWAIF 1CD0F 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_SMT1PWAIP 1CC0F 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_INLVLA 3A44 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_INLVLB 3A54 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_INLVLC 3A64 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_INLVLE 3A84 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_SAFEN$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+sendReport@command 224 0 BANK2 1 cstackBANK2 dist/Right/production\IR_Splitted_Slave.X.production.o
+sendReport@c 225 0 BANK2 1 cstackBANK2 dist/Right/production\IR_Splitted_Slave.X.production.o
+swRegister@c 74 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+swRegister@n 73 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_IOC_ISR 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+transceiverEnable@enable 83 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_popCount8bits 7FE9 0 MEDIUMCONST 0 mediumconst dist/Right/production\IR_Splitted_Slave.X.production.o
+_MAINPR 39F2 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_MD1SRC 3CFC 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_INTCON0bits 3FD2 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_MD1CON0bits 3CFA 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_PPS1WAY$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_transceiverEnable 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_initUI 1C58 0 CODE 0 text8 dist/Right/production\IR_Splitted_Slave.X.production.o
+start_initialization 1930 0 CODE 0 cinit dist/Right/production\IR_Splitted_Slave.X.production.o
+_ODCONA 3A42 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_ODCONB 3A52 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_ODCONC 3A62 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_OSCFRQ 39DF 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_DMA1DSA 3BF0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_DMA1DSZ 3BEE 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_DMA1SSA 3BF9 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_DMA1SSZ 3BF7 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_WDTCPS$WDTCPS_31 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_irRxBuffer 1F 0 COMRAM 1 bssCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+_TRISCbits 3FC4 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_RSTOSC$HFINTOSC_1MHZ 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+___rparam_used 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_RA7PPS 3A07 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_RC2PPS 3A12 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_bufInit 1B78 0 CODE 0 text12 dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_bufRead 1A58 0 CODE 0 text16 dist/Right/production\IR_Splitted_Slave.X.production.o
+_SMT1IE 1CC8D 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_SMT1IF 1CD0D 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_SMT1IP 1CC0D 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_SMT1PR 3F1B 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__pcstackBANK0 60 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__pcstackBANK2 200 0 BANK2 1 cstackBANK2 dist/Right/production\IR_Splitted_Slave.X.production.o
+_T5GCON 3F9B 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_TMR5IE 1CCC6 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_TMR5IF 1CD46 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_TMR5IP 1CC46 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_firstPush 46 0 COMRAM 1 dataCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+_swRegister 135A 0 CODE 0 text28 dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_SWINT_ISR 1C84 0 CODE 0 text18 dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_initPMD 1C26 0 CODE 0 text13 dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_SWINT_ISR 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hbank0 0 0 ABS 0 bank0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hbank1 0 0 ABS 0 bank1 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hbank2 0 0 ABS 0 bank2 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hbank3 0 0 ABS 0 bank3 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hbank4 0 0 ABS 0 bank4 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hbank5 0 0 ABS 0 bank5 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hbank6 0 0 ABS 0 bank6 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hbank7 0 0 ABS 0 bank7 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hcinit 0 0 ABS 0 cinit dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hconst 0 0 CONST 0 const dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hidata 0 0 CODE 0 idata dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hidloc 200010 0 IDLOC 0 idloc dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hparam 0 0 BANK0 1 param0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_disableAllInterrupt 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hrdata 0 0 COMRAM 1 rdata dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hstack 0 0 STACK 2 stack dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext0 0 0 ABS 0 text0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext1 0 0 ABS 0 text1 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext2 0 0 ABS 0 text2 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext3 0 0 ABS 0 text3 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext4 0 0 ABS 0 text4 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext5 0 0 ABS 0 text5 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext6 0 0 ABS 0 text6 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext7 0 0 ABS 0 text7 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext8 0 0 ABS 0 text8 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext9 0 0 ABS 0 text9 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hbigram 0 0 ABS 0 bigram dist/Right/production\IR_Splitted_Slave.X.production.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\imada\AppData\Local\Temp\s3l0.o
+__Hcomram 0 0 ABS 0 comram dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hconfig 30000A 0 CONFIG 0 config dist/Right/production\IR_Splitted_Slave.X.production.o
+bufWriteIntIC1@b 6C 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+bufWriteIntIC1@d 6E 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_initTransmitter 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lbank0 0 0 ABS 0 bank0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lbank1 0 0 ABS 0 bank1 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lbank2 0 0 ABS 0 bank2 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lbank3 0 0 ABS 0 bank3 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lbank4 0 0 ABS 0 bank4 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lbank5 0 0 ABS 0 bank5 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lbank6 0 0 ABS 0 bank6 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lbank7 0 0 ABS 0 bank7 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lcinit 0 0 ABS 0 cinit dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lconst 0 0 CONST 0 const dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lidata 0 0 CODE 0 idata dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lidloc 200000 0 IDLOC 0 idloc dist/Right/production\IR_Splitted_Slave.X.production.o
+main@countData 9A 0 BANK0 1 bssBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lparam 0 0 BANK0 1 param0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lrdata 0 0 COMRAM 1 rdata dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lstack 0 0 STACK 2 stack dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext0 0 0 ABS 0 text0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext1 0 0 ABS 0 text1 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext2 0 0 ABS 0 text2 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext3 0 0 ABS 0 text3 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext4 0 0 ABS 0 text4 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext5 0 0 ABS 0 text5 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext6 0 0 ABS 0 text6 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext7 0 0 ABS 0 text7 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext8 0 0 ABS 0 text8 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext9 0 0 ABS 0 text9 dist/Right/production\IR_Splitted_Slave.X.production.o
+checksum@dataCount 85 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+_SWINT_ISR 1C7C 0 CODE 0 text18 dist/Right/production\IR_Splitted_Slave.X.production.o
+sendReport@dataBuf 200 0 BANK2 1 cstackBANK2 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/Right/production\IR_Splitted_Slave.X.production.o
+_PORTCbits 3FCC 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Habs1 0 0 ABS 0 abs1 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hdata 0 0 ABS 0 data dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hinit B2 0 CODE 0 init dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hrbit 0 0 COMRAM 1 rbit dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hrbss 0 0 COMRAM 1 rbss dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htemp 0 0 COMRAM 1 temp dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext 0 0 ABS 0 text dist/Right/production\IR_Splitted_Slave.X.production.o
+__Labs1 0 0 ABS 0 abs1 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ldata 0 0 ABS 0 data dist/Right/production\IR_Splitted_Slave.X.production.o
+__Linit AE 0 CODE 0 init dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lrbit 0 0 COMRAM 1 rbit dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lrbss 0 0 COMRAM 1 rbss dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltemp 0 0 COMRAM 1 temp dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext 0 0 ABS 0 text dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_XINST$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+___lmul 1840 0 CODE 0 text22 dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_WDTCWS$WDTCWS_7 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__LcstackBANK2 0 0 ABS 0 cstackBANK2 dist/Right/production\IR_Splitted_Slave.X.production.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+_CLC1GLS0 3C7A 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_CLC1GLS1 3C7B 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_CLC1GLS2 3C7C 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_CLC1GLS3 3C7D 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_CLC1SEL0 3C76 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_CLC1SEL1 3C77 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_IOC_ISR 1C94 0 CODE 0 text30 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hirdata 0 0 CODE 0 irdata dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_bitOrderSwap 7EE9 0 MEDIUMCONST 0 mediumconst dist/Right/production\IR_Splitted_Slave.X.production.o
+_DOE 1CEC4 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_LED 169A 0 CODE 0 text29 dist/Right/production\IR_Splitted_Slave.X.production.o
+_ROI 1CEC5 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__S0 30000A 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__S1 236 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__S2 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_led 10 0 COMRAM 1 bssCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+_mSw 1 0 COMRAM 1 bssCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hivt0x8 AE 0 CODE 0 ivt0x8 dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_TMR5_ISR 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+sendReport@c_1098 227 0 BANK2 1 cstackBANK2 dist/Right/production\IR_Splitted_Slave.X.production.o
+IVTBASEH 3FD6 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+IVTBASEL 3FD5 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+IVTBASEU 3FD7 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+sendReport@dataCount 8E 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__pivt0x8 8 0 CODE 0 ivt0x8 dist/Right/production\IR_Splitted_Slave.X.production.o
+_disableAllInterrupt 1B78 0 CODE 0 text6 dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_swRegister 150E 0 CODE 0 text28 dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_BBEN$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_DEFAULT_ISR 1C8C 0 CODE 0 text19 dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_LED 172E 0 CODE 0 text29 dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_transceiverEnable 1A04 0 CODE 0 text4 dist/Right/production\IR_Splitted_Slave.X.production.o
+_sendReport 98E 0 CODE 0 text1 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hparam0 0 0 BANK0 1 param0 dist/Right/production\IR_Splitted_Slave.X.production.o
+_MD1CARHPPS 3AD7 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+checksum@command 89 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hramtop 800 0 RAM 0 ramtop dist/Right/production\IR_Splitted_Slave.X.production.o
+_CCPTMRS0bits 3F5E 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_initUI 1C40 0 CODE 0 text8 dist/Right/production\IR_Splitted_Slave.X.production.o
+_CCPTMRS1bits 3F5F 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_PWRTS$PWRT_16 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__pdataBANK0 BD 0 BANK0 1 dataBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__activetblptr 2 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hstruct 0 0 COMRAM 1 struct dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of___lmul 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__LbssBANK1 0 0 ABS 0 bssBANK1 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext10 0 0 ABS 0 text10 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext11 0 0 ABS 0 text11 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext12 0 0 ABS 0 text12 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext13 0 0 ABS 0 text13 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext14 0 0 ABS 0 text14 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext15 0 0 ABS 0 text15 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext16 0 0 ABS 0 text16 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext17 0 0 ABS 0 text17 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext18 0 0 ABS 0 text18 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext19 0 0 ABS 0 text19 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext20 0 0 ABS 0 text20 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext21 0 0 ABS 0 text21 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext22 0 0 ABS 0 text22 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext23 0 0 ABS 0 text23 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext24 0 0 ABS 0 text24 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext25 0 0 ABS 0 text25 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext26 0 0 ABS 0 text26 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext27 0 0 ABS 0 text27 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext28 0 0 ABS 0 text28 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext29 0 0 ABS 0 text29 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext30 0 0 ABS 0 text30 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext31 0 0 ABS 0 text31 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Htext32 0 0 ABS 0 text32 dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_SMT1_ISR 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+swUnregister@c 73 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_InitApp 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_CCDCONbits 3ABE 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_MVECEN$ON 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext10 150E 0 CODE 0 text10 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext11 1A58 0 CODE 0 text11 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext12 1B3C 0 CODE 0 text12 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext13 1C0A 0 CODE 0 text13 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext14 1BE6 0 CODE 0 text14 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext15 17BA 0 CODE 0 text15 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext16 1A04 0 CODE 0 text16 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext17 1C6C 0 CODE 0 text17 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext18 1C7C 0 CODE 0 text18 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext19 1C84 0 CODE 0 text19 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext20 F60 0 CODE 0 text20 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext21 1AA8 0 CODE 0 text21 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext22 1840 0 CODE 0 text22 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext23 D14 0 CODE 0 text23 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext24 1BB0 0 CODE 0 text24 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext25 18BC 0 CODE 0 text25 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext26 B2 0 CODE 0 text26 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext27 117E 0 CODE 0 text27 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext28 135A 0 CODE 0 text28 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext29 169A 0 CODE 0 text29 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext30 1C8C 0 CODE 0 text30 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext31 1C9C 0 CODE 0 text31 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext32 1C94 0 CODE 0 text32 dist/Right/production\IR_Splitted_Slave.X.production.o
+_TMR5_ISR 18BC 0 CODE 0 text25 dist/Right/production\IR_Splitted_Slave.X.production.o
+___awdiv 150E 0 CODE 0 text10 dist/Right/production\IR_Splitted_Slave.X.production.o
+sendReport@data 8C 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+main@countZeroPushing BD 0 BANK0 1 dataBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lbigram 0 0 ABS 0 bigram dist/Right/production\IR_Splitted_Slave.X.production.o
+___lmul@multiplier 34 0 COMRAM 1 cstackCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+swProcess@c 7E 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+swProcess@d 7C 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_SMT1PRA_ISR F5E 0 CODE 0 text23 dist/Right/production\IR_Splitted_Slave.X.production.o
+_DMA1CON0bits 3BFC 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lcomram 0 0 ABS 0 comram dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lconfig 300000 0 CONFIG 0 config dist/Right/production\IR_Splitted_Slave.X.production.o
+swProcess@col 7A 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+swProcess@row 7D 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+swProcess@sw2 7B 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_CP$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_SMT1PRW_ISR 117E 0 CODE 0 text20 dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_checksum 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_BBSIZE$BBSIZE_512 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_WDTE$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_TMR5_ISR 1930 0 CODE 0 text25 dist/Right/production\IR_Splitted_Slave.X.production.o
+ivt0x8_undefint AC 0 CODE 0 ivt0x8 dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_WRTAPP$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_report 96 0 BANK0 1 bssBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+main@data 235 0 BANK2 1 cstackBANK2 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/Right/production\IR_Splitted_Slave.X.production.o
+main@c_358 234 0 BANK2 1 cstackBANK2 dist/Right/production\IR_Splitted_Slave.X.production.o
+main@dataA 9D 0 BANK0 1 bssBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lfardata 0 0 FARRAM 0 fardata dist/Right/production\IR_Splitted_Slave.X.production.o
+bufInit@buf 85 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+_bufWriteIntIC1 1AA8 0 CODE 0 text21 dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_initUI 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_sendReport D14 0 CODE 0 text1 dist/Right/production\IR_Splitted_Slave.X.production.o
+_initReceiver 1A58 0 CODE 0 text11 dist/Right/production\IR_Splitted_Slave.X.production.o
+stackhi 7FF 0 ABS 0 - C:\Users\imada\AppData\Local\Temp\s3l0.o
+stacklo 236 0 ABS 0 - C:\Users\imada\AppData\Local\Temp\s3l0.o
+__Lirdata 0 0 CODE 0 irdata dist/Right/production\IR_Splitted_Slave.X.production.o
+_DMA1CON0 3BFC 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_DMA1CON1 3BFD 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_DMA1SIRQ 3BFF 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Livt0x8 8 0 CODE 0 ivt0x8 dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_LVP$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lspace_0 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lspace_1 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lspace_2 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_SMT1CON0 3F1E 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_SMT1CON1 3F1F 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_SMT1STAT 3F20 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_SMT1_ISR 1BB0 0 CODE 0 text24 dist/Right/production\IR_Splitted_Slave.X.production.o
+_CPUDOZEbits 39D8 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__pbssCOMRAM 1 0 COMRAM 1 bssCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_LPBOREN$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__HcstackBANK2 0 0 ABS 0 cstackBANK2 dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_PR1WAY$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_disableAllInterrupt 1BAE 0 CODE 0 text6 dist/Right/production\IR_Splitted_Slave.X.production.o
+_PIR2bits 39A2 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_CSWEN$ON 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_bufInit 1B3C 0 CODE 0 text12 dist/Right/production\IR_Splitted_Slave.X.production.o
+_bufRead 1A04 0 CODE 0 text16 dist/Right/production\IR_Splitted_Slave.X.production.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+_initInterrupt 1BE6 0 CODE 0 text14 dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_ZCD$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_transceiverEnable 19A2 0 CODE 0 text4 dist/Right/production\IR_Splitted_Slave.X.production.o
+end_of_initialization 1998 0 CODE 0 cinit dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_SMT1_ISR 1BE6 0 CODE 0 text24 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_STVREN$ON 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+___awdiv@quotient 89 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+?___awdiv 83 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lparam0 0 0 BANK0 1 param0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hreset_vec 4 0 CODE 0 reset_vec dist/Right/production\IR_Splitted_Slave.X.production.o
+_checksum 172E 0 CODE 0 text2 dist/Right/production\IR_Splitted_Slave.X.production.o
+__HbssBANK0 0 0 ABS 0 bssBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__HbssBANK1 0 0 ABS 0 bssBANK1 dist/Right/production\IR_Splitted_Slave.X.production.o
+_initPMD 1C0A 0 CODE 0 text13 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lramtop 800 0 RAM 0 ramtop dist/Right/production\IR_Splitted_Slave.X.production.o
+__pcinit 1930 0 CODE 0 cinit dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_CCP1_ISR 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_initReceiver 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_OSCCON1bits 39D9 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext0 54E 0 CODE 0 text0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext1 98E 0 CODE 0 text1 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext2 172E 0 CODE 0 text2 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext3 1AF8 0 CODE 0 text3 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext4 19A2 0 CODE 0 text4 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext5 1C58 0 CODE 0 text5 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext6 1B78 0 CODE 0 text6 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext7 1C26 0 CODE 0 text7 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext8 1C40 0 CODE 0 text8 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ptext9 1600 0 CODE 0 text9 dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_InitApp 1C40 0 CODE 0 text7 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lstruct 0 0 COMRAM 1 struct dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext10 0 0 ABS 0 text10 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext11 0 0 ABS 0 text11 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext12 0 0 ABS 0 text12 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext13 0 0 ABS 0 text13 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext14 0 0 ABS 0 text14 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext15 0 0 ABS 0 text15 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext16 0 0 ABS 0 text16 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext17 0 0 ABS 0 text17 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext18 0 0 ABS 0 text18 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext19 0 0 ABS 0 text19 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext20 0 0 ABS 0 text20 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext21 0 0 ABS 0 text21 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext22 0 0 ABS 0 text22 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext23 0 0 ABS 0 text23 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext24 0 0 ABS 0 text24 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext25 0 0 ABS 0 text25 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext26 0 0 ABS 0 text26 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext27 0 0 ABS 0 text27 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext28 0 0 ABS 0 text28 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext29 0 0 ABS 0 text29 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext30 0 0 ABS 0 text30 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext31 0 0 ABS 0 text31 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Ltext32 0 0 ABS 0 text32 dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_checksum 17BA 0 CODE 0 text2 dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_bufWriteIntIC1 1AF8 0 CODE 0 text21 dist/Right/production\IR_Splitted_Slave.X.production.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\imada\AppData\Local\Temp\s3l0.o
+_SMT1SIGPPS 3AD2 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_powerSave 1B3C 0 CODE 0 text3 dist/Right/production\IR_Splitted_Slave.X.production.o
+_PMD0bits 39C0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PMD1bits 39C1 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PMD3bits 39C3 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PMD6bits 39C6 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PMD7bits 39C7 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_DMA1SCNT_ISR 1C9C 0 CODE 0 text31 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lpowerup 0 0 CODE 0 powerup dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_powerSave 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/Right/production\IR_Splitted_Slave.X.production.o
+_swUnregister 117E 0 CODE 0 text27 dist/Right/production\IR_Splitted_Slave.X.production.o
+SMT1PRA_ISR@data 40 0 COMRAM 1 cstackCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+SMT1PRA_ISR@diff 41 0 COMRAM 1 cstackCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_DEFAULT_ISR 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_ConfigureOscillator 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_disableAllPMD 1C58 0 CODE 0 text5 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/Right/production\IR_Splitted_Slave.X.production.o
+_SLRCONA 3A43 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_SLRCONB 3A53 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_SLRCONC 3A63 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_swRegister 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+___param_bank 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_initReceiver 1AA8 0 CODE 0 text11 dist/Right/production\IR_Splitted_Slave.X.production.o
+_SMT1CLK 3F21 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_SMT1CPR 3F15 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_SMT1CPW 3F18 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of__initialization 1998 0 CODE 0 cinit dist/Right/production\IR_Splitted_Slave.X.production.o
+_nPushing 9B 0 BANK0 1 bssBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+_IOC_ISR 1C8C 0 CODE 0 text30 dist/Right/production\IR_Splitted_Slave.X.production.o
+_powerSave 1AF8 0 CODE 0 text3 dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Libigdata 0 0 CODE 0 ibigdata dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_WRTD$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__pidataBANK0 1CA4 0 CODE 0 idataBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext dist/Right/production\IR_Splitted_Slave.X.production.o
+_rowTable 7FF9 0 MEDIUMCONST 0 mediumconst dist/Right/production\IR_Splitted_Slave.X.production.o
+___lmul@product 3C 0 COMRAM 1 cstackCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+___lmul@multiplicand 38 0 COMRAM 1 cstackCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+bufInit@b 83 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__pcstackCOMRAM 23 0 COMRAM 1 cstackCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+_T3CONbits 3FA6 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__pmediumconst 7DE8 0 MEDIUMCONST 0 mediumconst dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_DMA1SCNT_ISR 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_rowTable 7FFF 0 MEDIUMCONST 0 mediumconst dist/Right/production\IR_Splitted_Slave.X.production.o
+_CCP1_ISR 1C94 0 CODE 0 text32 dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_SMT1PRA_ISR 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_swUnregister 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_SMT1PRW_ISR 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_main 98E 0 CODE 0 text0 dist/Right/production\IR_Splitted_Slave.X.production.o
+_CCDNA 3A49 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_CCDNB 3A59 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_CCDNC 3A69 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_CCDPA 3A48 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_CCDPB 3A58 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_CCDPC 3A68 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_CCPR1 3F7C 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_ConfigureOscillator 1C6C 0 CODE 0 text17 dist/Right/production\IR_Splitted_Slave.X.production.o
+_DOZEN 1CEC6 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__CFG_WRTSAF$OFF 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_IOCBF 3A57 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_IOCBN 3A56 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_IOCIE 1CC87 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_ISRPR 39F1 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_LATA6 1FDD6 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_LATC0 1FDE0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_LATC3 1FDE3 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PIE10 399A 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_PORTB 3FCB 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_initInterrupt 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_T2CLK 3FAE 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_T2CON 3FAC 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_T2RST 3FAF 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_T3CLK 3FA9 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_T3CON 3FA6 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_T5CLK 3F9D 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_T5CON 3F9A 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_TMR3H 3FA5 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_TMR3L 3FA4 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_TRISA 3FC2 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_TRISB 3FC3 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_TRISC 3FC4 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__HRAM 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hbss 0 0 RAM 1 bss dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hram 0 0 ABS 0 ram dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hsfr 0 0 ABS 0 sfr dist/Right/production\IR_Splitted_Slave.X.production.o
+__LRAM 1 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lbss 0 0 RAM 1 bss dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lram 0 0 ABS 0 ram dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lsfr 0 0 ABS 0 sfr dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_CCP1_ISR 1C9C 0 CODE 0 text32 dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_swProcess 54E 0 CODE 0 text26 dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_swProcess 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_LED 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__HdataBANK0 0 0 ABS 0 dataBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+_MD1CARH 3CFE 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_MD1CARL 3CFD 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_MD1CON0 3CFA 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_MD1CON1 3CFB 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__initialization 1930 0 CODE 0 cinit dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_DMA1SCNT_ISR 1CA2 0 CODE 0 text31 dist/Right/production\IR_Splitted_Slave.X.production.o
+__pbssBANK0 96 0 BANK0 1 bssBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__pbssBANK1 100 0 BANK1 1 bssBANK1 dist/Right/production\IR_Splitted_Slave.X.production.o
+__pdataCOMRAM 45 0 COMRAM 1 dataCOMRAM dist/Right/production\IR_Splitted_Slave.X.production.o
+bufRead@b 83 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+bufRead@d 88 0 BANK0 1 cstackBANK0 dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_swUnregister 135A 0 CODE 0 text27 dist/Right/production\IR_Splitted_Slave.X.production.o
+_T2CONbits 3FAC 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hfardata 0 0 FARRAM 0 fardata dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hsmallconst 0 0 SMALLCONST 0 smallconst dist/Right/production\IR_Splitted_Slave.X.production.o
+__Lifardata 0 0 CODE 0 ifardata dist/Right/production\IR_Splitted_Slave.X.production.o
+_CCP1CONbits 3F7E 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+_swProcess B2 0 CODE 0 text26 dist/Right/production\IR_Splitted_Slave.X.production.o
+__size_of_sendReport 0 0 ABS 0 - dist/Right/production\IR_Splitted_Slave.X.production.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/Right/production\IR_Splitted_Slave.X.production.o
+__end_of_initInterrupt 1C0A 0 CODE 0 text14 dist/Right/production\IR_Splitted_Slave.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+ivt0x8 0 8 8 F56 1
+idloc 0 200000 200000 10 1
+text20 0 F60 F60 95A 1
+text24 0 1BB0 1BB0 F5 1
+text25 0 18BC 18BC 2F2 1
+cstackBANK0 1 60 60 5E 1
+cstackBANK2 1 200 200 36 1
+reset_vec 0 0 0 4 1
+bssBANK1 1 100 100 100 1
+bssCOMRAM 1 1 1 46 1
+mediumconst 0 7DE8 7DE8 218 1
+config 0 300000 300000 A 1

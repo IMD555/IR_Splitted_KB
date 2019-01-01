@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "ringbuffer.h": "c",
+        "ir_format.h": "c",
+        "xc.h": "c",
+        "stdint.h": "c",
+        "cci.h": "c"
+    },
+    "editor.insertSpaces": false
+}
