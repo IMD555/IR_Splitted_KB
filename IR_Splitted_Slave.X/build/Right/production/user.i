@@ -26138,7 +26138,8 @@ void sendReport(uint8_t command, uint8_t* data, uint8_t dataCount)
  }
 
 
- dataBuf[0] = ((5 + ((9) * 3))) + (5 + ((command & 0x7) * 3));
+
+ dataBuf[0] = ((5 + ((9) * 3))) + (5 + ((command & 0x7) * 3)) + 20;
 
 
  for (uint8_t c = 0; c < dataCount; c++) {
@@ -26160,7 +26161,8 @@ void sendReport(uint8_t command, uint8_t* data, uint8_t dataCount)
 
  DMA1SIRQ = 35;
 
- CCPR1 = 0 + ((5 + ((9) * 3)));
+
+ CCPR1 = 0 + ((5 + ((9) * 3))) + 20;
  TMR3H = 0xff;
  TMR3L = 0xff;
 

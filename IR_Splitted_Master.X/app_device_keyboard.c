@@ -217,7 +217,7 @@ void APP_KeyboardInit(void)
 
 void APP_KeyboardTasks(void)
 {
-		return;
+//		return;
 	
 	
 //	CVRCONbits.CVR = 20;

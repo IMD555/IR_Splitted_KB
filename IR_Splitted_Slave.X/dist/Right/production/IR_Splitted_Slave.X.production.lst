@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V2.00 build -1524193055 
-                                                                                               Mon Dec 31 17:50:55 2018
+                                                                                               Wed Jan 02 01:39:28 2019
 
 Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 20180527130849
      1  0000                     
@@ -12589,7 +12589,7 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
  12495                           __CFG_LVP$OFF equ 0x0
  12496  0000                     global __CFG_CP$OFF
  12497                           __CFG_CP$OFF equ 0x0
- 12498  0000                     	file	"C:\Users\imada\AppData\Local\Temp\s3l0."
+ 12498  0000                     	file	"C:\Users\imada\AppData\Local\Temp\sfms."
  12499                           	line	#
  12500                           psect	cinit,class=CODE,delta=1,reloc=2
  12501                           global __pcinit
@@ -12659,7 +12659,7 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
  12565  000100                     	global	_irRxBuffer1
  12566                           _irRxBuffer1:
  12567  000100                            ds      256
- 12568  000100                     	file	"C:\Users\imada\AppData\Local\Temp\s3l0."
+ 12568  000100                     	file	"C:\Users\imada\AppData\Local\Temp\sfms."
  12569                           	line	#
  12570                           psect	cinit
  12571                           ; Initialize objects allocated to BANK0 (1 bytes)
@@ -14818,40 +14818,40 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
  14719  0009E0  EFF2  F004         	
  14720                           l578:; BSR set to: 2
  14721  0009E4                     
- 14722                           	line	284
+ 14722                           	line	285
  14723                           	
  14724                           l4481:; BSR set to: 2
  14725  0009E4                     
- 14726                           ;user.c: 284:  dataBuf[0] = ((5 + ((9) * 3))) + (5 + ((command & 0x7) * 3));
+ 14726                           ;user.c: 285:  dataBuf[0] = ((5 + ((9) * 3))) + (5 + ((command & 0x7) * 3)) + 20;
  14727                           	movff	(sendReport@command),??_sendReport+0+0
  14728  0009E4  0060  F890  F08F   	movlw	07h
  14729  0009EA  0E07               	movlb	0	; () banked
  14730  0009EC  0100               	andwf	(??_sendReport+0+0)&0ffh
  14731  0009EE  178F               	movf	(??_sendReport+0+0)&0ffh,w
  14732  0009F0  518F               	mullw	03h
- 14733  0009F2  0D03               	movlw	low(025h)
- 14734  0009F4  0E25               	addwf	(prodl),c,w
+ 14733  0009F2  0D03               	movlw	low(039h)
+ 14734  0009F4  0E39               	addwf	(prodl),c,w
  14735  0009F6  24F3               	movlb	2	; () banked
  14736  0009F8  0102               	movwf	((sendReport@dataBuf))&0ffh
- 14737  0009FA  6F00               	movlw	high(025h)
+ 14737  0009FA  6F00               	movlw	high(039h)
  14738  0009FC  0E00               	addwfc	(prodh),c,w
  14739  0009FE  20F4               	movwf	1+((sendReport@dataBuf))&0ffh
- 14740  000A00  6F01               	line	287
+ 14740  000A00  6F01               	line	288
  14741                           	
  14742                           l4483:; BSR set to: 2
  14743  000A02                     
- 14744                           ;user.c: 287:  for (uint8_t c = 0; c < dataCount; c++) {
+ 14744                           ;user.c: 288:  for (uint8_t c = 0; c < dataCount; c++) {
  14745                           	movlw	low(0)
  14746  000A02  0E00               	movwf	((sendReport@c_1098))&0ffh
  14747  000A04  6F27               	goto	l4489
  14748  000A06  EF9E  F005         	
  14749                           l580:; BSR set to: 2
  14750  000A0A                     
- 14751                           	line	288
+ 14751                           	line	289
  14752                           	
  14753                           l4485:; BSR set to: 2
  14754  000A0A                     
- 14755                           ;user.c: 288:   dataBuf[c * 2 + 1] = dataBuf[c * 2] + (5 + ((data[c] >> 3) * 3));
+ 14755                           ;user.c: 289:   dataBuf[c * 2 + 1] = dataBuf[c * 2] + (5 + ((data[c] >> 3) * 3));
  14756                           	movf	((sendReport@c_1098))&0ffh,w
  14757  000A0A  5127               	mullw	02h
  14758  000A0C  0D02               	bcf	status,0
@@ -14918,8 +14918,8 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
  14819  000A8A  6EDA               	movff	prodl,postinc2
  14820  000A8C  006F FFCF FFDE     	movff	prodh,postdec2
  14821  000A92  006F FFD3 FFDD     
- 14822                           	line	289
- 14823                           ;user.c: 289:   dataBuf[c * 2 + 2] = dataBuf[c * 2 + 1] + (5 + ((data[c] & 7) * 3));
+ 14822                           	line	290
+ 14823                           ;user.c: 290:   dataBuf[c * 2 + 2] = dataBuf[c * 2 + 1] + (5 + ((data[c] & 7) * 3));
  14824                           	movlb	2	; () banked
  14825  000A98  0102               	movf	((sendReport@c_1098))&0ffh,w
  14826  000A9A  5127               	movlb	0	; () banked
@@ -14993,11 +14993,11 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
  14894  000B26  6EDA               	movff	prodl,postinc2
  14895  000B28  006F FFCF FFDE     	movff	prodh,postdec2
  14896  000B2E  006F FFD3 FFDD     
- 14897                           	line	290
+ 14897                           	line	291
  14898                           	
  14899                           l4487:; BSR set to: 0
  14900  000B34                     
- 14901                           ;user.c: 290:  }
+ 14901                           ;user.c: 291:  }
  14902                           	movlb	2	; () banked
  14903  000B34  0102               	incf	((sendReport@c_1098))&0ffh
  14904  000B36  2B27               	goto	l4489
@@ -15022,11 +15022,11 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
  14923  000B52  EFAB  F005         	
  14924                           l581:; BSR set to: 2
  14925  000B56                     
- 14926                           	line	292
+ 14926                           	line	293
  14927                           	
  14928                           l4491:; BSR set to: 2
  14929  000B56                     
- 14930                           ;user.c: 292:  dataBuf[dataCount * 2 + 1] = dataBuf[dataCount * 2] + (5 + ((checksum(com
+ 14930                           ;user.c: 293:  dataBuf[dataCount * 2 + 1] = dataBuf[dataCount * 2] + (5 + ((checksum(com
                                  mand,&data[0],dataCount)) * 3));
  14931                           	movlb	0	; () banked
  14932  000B56  0100               	movf	((sendReport@dataCount))&0ffh,w
@@ -15085,11 +15085,11 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
  14985  000BD0  6EDA               	movff	prodl,postinc2
  14986  000BD2  006F FFCF FFDE     	movff	prodh,postdec2
  14987  000BD8  006F FFD3 FFDD     
- 14988                           	line	294
+ 14988                           	line	295
  14989                           	
  14990                           l4493:; BSR set to: 0
  14991  000BDE                     
- 14992                           ;user.c: 294:  dataBuf[dataCount * 2 + 2] = dataBuf[dataCount * 2 + 1] + ((5 + ((10) * 3
+ 14992                           ;user.c: 295:  dataBuf[dataCount * 2 + 2] = dataBuf[dataCount * 2 + 1] + ((5 + ((10) * 3
                                  )));
  14993                           	movf	((sendReport@dataCount))&0ffh,w
  14994  000BDE  518E               	movwf	(??_sendReport+0+0)&0ffh
@@ -15140,19 +15140,19 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
  15039  000C3C  6EDA               	movff	??_sendReport+2+0,postinc2
  15040  000C3E  0060  F247  FFDE   	movff	??_sendReport+2+1,postdec2
  15041  000C44  0060  F24B  FFDD   
- 15042                           	line	297
+ 15042                           	line	298
  15043                           	
  15044                           l4495:; BSR set to: 0
  15045  000C4A                     
- 15046                           ;user.c: 297:  DMA1CON0 = 0x00;
+ 15046                           ;user.c: 298:  DMA1CON0 = 0x00;
  15047                           	movlw	low(0)
  15048  000C4A  0E00               	movlb	59	; () banked
  15049  000C4C  013B               	movwf	((15356))&0ffh	;volatile
- 15050  000C4E  6FFC               	line	298
+ 15050  000C4E  6FFC               	line	299
  15051                           	
  15052                           l4497:; BSR set to: 59
  15053  000C50                     
- 15054                           ;user.c: 298:  DMA1SSA = &dataBuf[0];
+ 15054                           ;user.c: 299:  DMA1SSA = &dataBuf[0];
  15055                           	movlw	low(sendReport@dataBuf)
  15056  000C50  0E00               	movwf	((15353))&0ffh	;volatile
  15057  000C52  6FF9               	movlw	high(sendReport@dataBuf)
@@ -15160,27 +15160,27 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
  15059  000C56  6FFA               	movlw	low highword(sendReport@dataBuf)
  15060  000C58  0E00               	movwf	((15353+2))&0ffh	;volatile
  15061  000C5A  6FFB               
- 15062                           	line	299
+ 15062                           	line	300
  15063                           	
  15064                           l4499:; BSR set to: 59
  15065  000C5C                     
- 15066                           ;user.c: 299:  DMA1DSA = &CCPR1;
+ 15066                           ;user.c: 300:  DMA1DSA = &CCPR1;
  15067                           	movlw	high(03F7Ch)
  15068  000C5C  0E3F               	movwf	((15344+1))&0ffh	;volatile
  15069  000C5E  6FF1               	movlw	low(03F7Ch)
  15070  000C60  0E7C               	movwf	((15344))&0ffh	;volatile
- 15071  000C62  6FF0               	line	300
+ 15071  000C62  6FF0               	line	301
  15072                           	
  15073                           l4501:; BSR set to: 59
  15074  000C64                     
- 15075                           ;user.c: 300:  DMA1CON1 = 0x43;
+ 15075                           ;user.c: 301:  DMA1CON1 = 0x43;
  15076                           	movlw	low(043h)
  15077  000C64  0E43               	movwf	((15357))&0ffh	;volatile
- 15078  000C66  6FFD               	line	301
+ 15078  000C66  6FFD               	line	302
  15079                           	
  15080                           l4503:; BSR set to: 59
  15081  000C68                     
- 15082                           ;user.c: 301:  DMA1SSZ = 6 + dataCount * 4;
+ 15082                           ;user.c: 302:  DMA1SSZ = 6 + dataCount * 4;
  15083                           	movlb	0	; () banked
  15084  000C68  0100               	movf	((sendReport@dataCount))&0ffh,w
  15085  000C6A  518E               	mullw	04h
@@ -15191,163 +15191,163 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
  15090  000C74  6FF7               	movlw	high(06h)
  15091  000C76  0E00               	addwfc	(prodh),c,w
  15092  000C78  20F4               	movwf	1+((15351))&0ffh	;volatile
- 15093  000C7A  6FF8               	line	302
+ 15093  000C7A  6FF8               	line	303
  15094                           	
  15095                           l4505:; BSR set to: 59
  15096  000C7C                     
- 15097                           ;user.c: 302:  DMA1DSZ = 2;
+ 15097                           ;user.c: 303:  DMA1DSZ = 2;
  15098                           	movlw	high(02h)
  15099  000C7C  0E00               	movwf	((15342+1))&0ffh	;volatile
  15100  000C7E  6FEF               	movlw	low(02h)
  15101  000C80  0E02               	movwf	((15342))&0ffh	;volatile
- 15102  000C82  6FEE               	line	304
+ 15102  000C82  6FEE               	line	305
  15103                           	
  15104                           l4507:; BSR set to: 59
  15105  000C84                     
- 15106                           ;user.c: 304:  DMA1SIRQ = 35;
+ 15106                           ;user.c: 305:  DMA1SIRQ = 35;
  15107                           	movlw	low(023h)
  15108  000C84  0E23               	movwf	((15359))&0ffh	;volatile
- 15109  000C86  6FFF               	line	306
+ 15109  000C86  6FFF               	line	308
  15110                           	
  15111                           l4509:; BSR set to: 59
  15112  000C88                     
- 15113                           ;user.c: 306:  CCPR1 = 0 + ((5 + ((9) * 3)));
- 15114                           	movlw	high(020h)
+ 15113                           ;user.c: 308:  CCPR1 = 0 + ((5 + ((9) * 3))) + 20;
+ 15114                           	movlw	high(034h)
  15115  000C88  0E00               	movlb	63	; () banked
  15116  000C8A  013F               	movwf	((16252+1))&0ffh	;volatile
- 15117  000C8C  6F7D               	movlw	low(020h)
- 15118  000C8E  0E20               	movwf	((16252))&0ffh	;volatile
- 15119  000C90  6F7C               	line	307
+ 15117  000C8C  6F7D               	movlw	low(034h)
+ 15118  000C8E  0E34               	movwf	((16252))&0ffh	;volatile
+ 15119  000C90  6F7C               	line	309
  15120                           	
  15121                           l4511:; BSR set to: 63
  15122  000C92                     
- 15123                           ;user.c: 307:  TMR3H = 0xff;
+ 15123                           ;user.c: 309:  TMR3H = 0xff;
  15124                           	setf	((16293))&0ffh	;volatile
- 15125  000C92  69A5               	line	308
+ 15125  000C92  69A5               	line	310
  15126                           	
  15127                           l4513:; BSR set to: 63
  15128  000C94                     
- 15129                           ;user.c: 308:  TMR3L = 0xff;
+ 15129                           ;user.c: 310:  TMR3L = 0xff;
  15130                           	setf	((16292))&0ffh	;volatile
- 15131  000C94  69A4               	line	310
+ 15131  000C94  69A4               	line	312
  15132                           	
  15133                           l4515:; BSR set to: 63
  15134  000C96                     
- 15135                           ;user.c: 310:  TMR2= 0xff;
+ 15135                           ;user.c: 312:  TMR2= 0xff;
  15136                           	setf	((16298))&0ffh	;volatile
- 15137  000C96  69AA               	line	311
+ 15137  000C96  69AA               	line	313
  15138                           	
  15139                           l4517:; BSR set to: 63
  15140  000C98                     
- 15141                           ;user.c: 311:  CLC1POLbits.G3POL =1;
+ 15141                           ;user.c: 313:  CLC1POLbits.G3POL =1;
  15142                           	movlb	60	; () banked
  15143  000C98  013C               	bsf	((15477))&0ffh,2	;volatile
- 15144  000C9A  8575               	line	312
+ 15144  000C9A  8575               	line	314
  15145                           	
  15146                           l4519:; BSR set to: 60
  15147  000C9C                     
- 15148                           ;user.c: 312:  CLC1POLbits.G3POL =0;
+ 15148                           ;user.c: 314:  CLC1POLbits.G3POL =0;
  15149                           	bcf	((15477))&0ffh,2	;volatile
- 15150  000C9C  9575               	line	314
+ 15150  000C9C  9575               	line	316
  15151                           	
  15152                           l4521:; BSR set to: 60
  15153  000C9E                     
- 15154                           ;user.c: 314:  MD1CON0bits.EN = 1;
+ 15154                           ;user.c: 316:  MD1CON0bits.EN = 1;
  15155                           	bsf	((15610))&0ffh,7	;volatile
- 15156  000C9E  8FFA               	line	315
+ 15156  000C9E  8FFA               	line	317
  15157                           	
  15158                           l4523:; BSR set to: 60
  15159  000CA0                     
- 15160                           ;user.c: 315:  CCP1CONbits.EN = 1;
+ 15160                           ;user.c: 317:  CCP1CONbits.EN = 1;
  15161                           	movlb	63	; () banked
  15162  000CA0  013F               	bsf	((16254))&0ffh,7	;volatile
- 15163  000CA2  8F7E               	line	317
+ 15163  000CA2  8F7E               	line	319
  15164                           	
  15165                           l4525:; BSR set to: 63
  15166  000CA4                     
- 15167                           ;user.c: 317:  T3CONbits.ON = 1;
+ 15167                           ;user.c: 319:  T3CONbits.ON = 1;
  15168                           	bsf	((16294))&0ffh,0	;volatile
- 15169  000CA4  81A6               	line	318
+ 15169  000CA4  81A6               	line	320
  15170                           	
  15171                           l4527:; BSR set to: 63
  15172  000CA6                     
- 15173                           ;user.c: 318:  DMA1CON0bits.EN = 1;
+ 15173                           ;user.c: 320:  DMA1CON0bits.EN = 1;
  15174                           	movlb	59	; () banked
  15175  000CA6  013B               	bsf	((15356))&0ffh,7	;volatile
- 15176  000CA8  8FFC               	line	319
+ 15176  000CA8  8FFC               	line	321
  15177                           	
  15178                           l4529:; BSR set to: 59
  15179  000CAA                     
- 15180                           ;user.c: 319:  DMA1CON0bits.SIRQEN = 1;
+ 15180                           ;user.c: 321:  DMA1CON0bits.SIRQEN = 1;
  15181                           	bsf	((15356))&0ffh,6	;volatile
- 15182  000CAA  8DFC               	line	320
+ 15182  000CAA  8DFC               	line	322
  15183                           	
  15184                           l4531:; BSR set to: 59
  15185  000CAC                     
- 15186                           ;user.c: 320:  CCP1CONbits.MODE = 0x09;
+ 15186                           ;user.c: 322:  CCP1CONbits.MODE = 0x09;
  15187                           	movlb	63	; () banked
  15188  000CAC  013F               	movf	((16254))&0ffh,w	;volatile
  15189  000CAE  517E               	andlw	not (((1<<4)-1)<<0)
  15190  000CB0  0BF0               	iorlw	(09h & ((1<<4)-1))<<0
  15191  000CB2  0909               	movwf	((16254))&0ffh	;volatile
- 15192  000CB4  6F7E               	line	321
+ 15192  000CB4  6F7E               	line	323
  15193                           	
  15194                           l4533:; BSR set to: 63
  15195  000CB6                     
- 15196                           ;user.c: 321:  T2CONbits.ON = 1;
+ 15196                           ;user.c: 323:  T2CONbits.ON = 1;
  15197                           	bsf	((16300))&0ffh,7	;volatile
- 15198  000CB6  8FAC               	line	322
+ 15198  000CB6  8FAC               	line	324
  15199                           	
  15200                           l4535:; BSR set to: 63
  15201  000CB8                     
- 15202                           ;user.c: 322:  CCP1CONbits.MODE = 0x02;
+ 15202                           ;user.c: 324:  CCP1CONbits.MODE = 0x02;
  15203                           	movf	((16254))&0ffh,w	;volatile
  15204  000CB8  517E               	andlw	not (((1<<4)-1)<<0)
  15205  000CBA  0BF0               	iorlw	(02h & ((1<<4)-1))<<0
  15206  000CBC  0902               	movwf	((16254))&0ffh	;volatile
- 15207  000CBE  6F7E               	line	324
+ 15207  000CBE  6F7E               	line	326
  15208                           	
  15209                           l4537:; BSR set to: 63
  15210  000CC0                     
- 15211                           ;user.c: 324:  LATA6 = 1;
+ 15211                           ;user.c: 326:  LATA6 = 1;
  15212                           	bsf	(130518/8)&0ffh,(130518)&7	;volatile
- 15213  000CC0  8DBA               	line	326
+ 15213  000CC0  8DBA               	line	328
  15214                           	
  15215                           l4539:; BSR set to: 63
  15216  000CC2                     
- 15217                           ;user.c: 326:  PIR2bits.DMA1SCNTIF = 0;
+ 15217                           ;user.c: 328:  PIR2bits.DMA1SCNTIF = 0;
  15218                           	movlb	57	; () banked
  15219  000CC2  0139               	bcf	((14754))&0ffh,0	;volatile
- 15220  000CC4  91A2               	line	329
+ 15220  000CC4  91A2               	line	331
  15221                           	
  15222                           l4541:; BSR set to: 57
  15223  000CC6                     
- 15224                           ;user.c: 329:  CPUDOZEbits.DOZE = 7;
+ 15224                           ;user.c: 331:  CPUDOZEbits.DOZE = 7;
  15225                           		
  15226                           	bsf	((14808))&0ffh, 0+0	;volatile
  15227  000CC6  81D8               	bsf	((14808))&0ffh, 0+1	;volatile
  15228  000CC8  83D8               	bsf	((14808))&0ffh, 0+2	;volatile
  15229  000CCA  85D8               
- 15230                           	line	330
+ 15230                           	line	332
  15231                           	
  15232                           l4543:; BSR set to: 57
  15233  000CCC                     
- 15234                           ;user.c: 330:  ROI = 1;
+ 15234                           ;user.c: 332:  ROI = 1;
  15235                           	bsf	(118469/8)&0ffh,(118469)&7	;volatile
- 15236  000CCC  8BD8               	line	331
+ 15236  000CCC  8BD8               	line	333
  15237                           	
  15238                           l4545:; BSR set to: 57
  15239  000CCE                     
- 15240                           ;user.c: 331:  DOE = 1;
+ 15240                           ;user.c: 333:  DOE = 1;
  15241                           	bsf	(118468/8)&0ffh,(118468)&7	;volatile
- 15242  000CCE  89D8               	line	332
+ 15242  000CCE  89D8               	line	334
  15243                           	
  15244                           l4547:; BSR set to: 57
  15245  000CD0                     
- 15246                           ;user.c: 332:  DOZEN = 1;
+ 15246                           ;user.c: 334:  DOZEN = 1;
  15247                           	bsf	(118470/8)&0ffh,(118470)&7	;volatile
- 15248  000CD0  8DD8               	line	334
- 15249                           ;user.c: 334:  while (!PIR2bits.DMA1SCNTIF);
+ 15248  000CD0  8DD8               	line	336
+ 15249                           ;user.c: 336:  while (!PIR2bits.DMA1SCNTIF);
  15250                           	goto	l582
  15251  000CD2  EF6B  F006         	
  15252                           l583:; BSR set to: 57
@@ -15364,19 +15364,19 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
  15263  000CE4                     	
  15264                           l584:; BSR set to: 57
  15265  000CE4                     
- 15266                           	line	336
- 15267                           ;user.c: 336:  MD1CON0bits.EN = 0;
+ 15266                           	line	338
+ 15267                           ;user.c: 338:  MD1CON0bits.EN = 0;
  15268                           	movlb	60	; () banked
  15269  000CE4  013C               	bcf	((15610))&0ffh,7	;volatile
- 15270  000CE6  9FFA               	line	338
- 15271                           ;user.c: 338:  CCP1IF = 0;
+ 15270  000CE6  9FFA               	line	340
+ 15271                           ;user.c: 340:  CCP1IF = 0;
  15272                           	movlb	57	; () banked
  15273  000CE8  0139               	bcf	(118051/8)&0ffh,(118051)&7	;volatile
- 15274  000CEA  97A4               	line	341
- 15275                           ;user.c: 341:  DOZEN = 0;
+ 15274  000CEA  97A4               	line	343
+ 15275                           ;user.c: 343:  DOZEN = 0;
  15276                           	bcf	(118470/8)&0ffh,(118470)&7	;volatile
- 15277  000CEC  9DD8               	line	342
- 15278                           ;user.c: 342:  while (!CCP1IF);
+ 15277  000CEC  9DD8               	line	344
+ 15278                           ;user.c: 344:  while (!CCP1IF);
  15279                           	goto	l585
  15280  000CEE  EF79  F006         	
  15281                           l586:; BSR set to: 57
@@ -15393,30 +15393,30 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
  15292  000D00                     	
  15293                           l587:; BSR set to: 57
  15294  000D00                     
- 15295                           	line	344
- 15296                           ;user.c: 344:  DOZEN = 0;
+ 15295                           	line	346
+ 15296                           ;user.c: 346:  DOZEN = 0;
  15297                           	bcf	(118470/8)&0ffh,(118470)&7	;volatile
- 15298  000D00  9DD8               	line	346
- 15299                           ;user.c: 346:  CCP1CONbits.EN = 0;
+ 15298  000D00  9DD8               	line	348
+ 15299                           ;user.c: 348:  CCP1CONbits.EN = 0;
  15300                           	movlb	63	; () banked
  15301  000D02  013F               	bcf	((16254))&0ffh,7	;volatile
- 15302  000D04  9F7E               	line	347
- 15303                           ;user.c: 347:  T3CONbits.ON = 0;
+ 15302  000D04  9F7E               	line	349
+ 15303                           ;user.c: 349:  T3CONbits.ON = 0;
  15304                           	bcf	((16294))&0ffh,0	;volatile
- 15305  000D06  91A6               	line	348
- 15306                           ;user.c: 348:  T2CONbits.ON = 0;
+ 15305  000D06  91A6               	line	350
+ 15306                           ;user.c: 350:  T2CONbits.ON = 0;
  15307                           	bcf	((16300))&0ffh,7	;volatile
- 15308  000D08  9FAC               	line	355
- 15309                           ;user.c: 355:  LATA6 = 0;
+ 15308  000D08  9FAC               	line	357
+ 15309                           ;user.c: 357:  LATA6 = 0;
  15310                           	bcf	(130518/8)&0ffh,(130518)&7	;volatile
- 15311  000D0A  9DBA               	line	362
- 15312                           ;user.c: 362:  SMT1PWAIF = 0;
+ 15311  000D0A  9DBA               	line	364
+ 15312                           ;user.c: 364:  SMT1PWAIF = 0;
  15313                           	movlb	57	; () banked
  15314  000D0C  0139               	bcf	(118031/8)&0ffh,(118031)&7	;volatile
- 15315  000D0E  9FA1               	line	363
- 15316                           ;user.c: 363:  SMT1PWAIE = 1;
+ 15315  000D0E  9FA1               	line	365
+ 15316                           ;user.c: 365:  SMT1PWAIE = 1;
  15317                           	bsf	(117903/8)&0ffh,(117903)&7	;volatile
- 15318  000D10  8F91               	line	364
+ 15318  000D10  8F91               	line	366
  15319                           	
  15320                           l588:; BSR set to: 57
  15321  000D12                     
@@ -22258,7 +22258,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.00 build -1524193055 
-Symbol Table                                                                                   Mon Dec 31 17:50:55 2018
+Symbol Table                                                                                   Wed Jan 02 01:39:28 2019
 
                  __CFG_CP$OFF 000000                  ___awdiv@sign 0088                            _sw 0018  
                          l302 1B3A                           l250 0870                           l251 05DE  

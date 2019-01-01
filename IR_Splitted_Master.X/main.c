@@ -117,7 +117,7 @@ void decodeReport(void)
 
 	while (bufDataExist(irRxBuffer))
 	{
-		LATBbits.LATB13 = 0;
+//		LATBbits.LATB13 = 0;
 		uint8_t data = bufRead(&irRxBuffer);
 
 //		LATBbits.LATB13 = data&1;
@@ -158,7 +158,7 @@ void decodeReport(void)
 				if ((dataA[countData >> 1] >> 3) == checksum(dataA[0], &dataA[1], (countData >> 1) - 1))
 				{
 					//ChechSum OK!
-		LATBbits.LATB13 = 0;
+//		LATBbits.LATB13 = 0;
 					switch (dataA[0])
 					{
 					case RPTL:
@@ -242,14 +242,14 @@ void decodeReport(void)
 				else
 				{
 					//error checksum
-		LATBbits.LATB13 = 1;
+		LATBbits.LATB13 ^= 1;
 					switch (dataA[0]) {
 					case RPTL:
 						LED_Off(LED_LEFT_OK);
-						LED_Off(LED_RIGHT_OK);
+						LED_On(LED_LEFT_NG);
 						break;
 					case RPTR:
-						LED_On(LED_LEFT_NG);
+						LED_Off(LED_RIGHT_OK);
 						LED_On(LED_RIGHT_NG);
 						break;
 					default:
@@ -301,7 +301,7 @@ void waitReport(uint8_t command)
 		
 		APP_KeyboardTasks();
 //	CVRCONbits.CVR = 10;
-		CVRCONbits.CVR++;
+//		CVRCONbits.CVR++;
 	}					//Exit by STOP or No reply
 	
 	IEC0bits.IC1IE = 0; //stop receiving
@@ -370,7 +370,7 @@ uint8_t sendReport(uint8_t command, uint8_t *data, uint8_t dataCount)
 	while (!IFS0bits.DMA0IF){
 		APP_KeyboardTasks();
 //	CVRCONbits.CVR = 31;
-		CVRCONbits.CVR++;
+//		CVRCONbits.CVR++;
 	}
 	//
 	//		MDCONbits.MDOE = 0;
@@ -387,7 +387,7 @@ uint8_t sendReport(uint8_t command, uint8_t *data, uint8_t dataCount)
 	while (!IFS0bits.OC2IF)	{	
 		APP_KeyboardTasks();
 //	CVRCONbits.CVR = 31;
-		CVRCONbits.CVR++;
+//		CVRCONbits.CVR++;
 	}
 
 	DMACH0bits.CHEN = 0;
@@ -396,7 +396,7 @@ uint8_t sendReport(uint8_t command, uint8_t *data, uint8_t dataCount)
 
 	//		IFS0bits.OC2IF = 0;
 	//		IEC0bits.OC2IE = 1;
-	IEC0bits.T3IE = 1;
+//	IEC0bits.T3IE = 1;
 
 	//	while(!PORTBbits.RB4);
 
@@ -465,13 +465,13 @@ void init(void)
 						  //	RPOR7bits.RP14R = 14;	//RB14 = OC2
 	RPOR7bits.RP15R = 13; //RB15 = OC1  DON'T CHANGE
 
-	IPC5bits.INT1IP = 7;
-	IPC6bits.T4IP = 1;
-	IPC2bits.T3IP = 7;
+	IPC5bits.INT1IP = 7;	//edge detect
+	IPC2bits.T3IP = 7;		//stop detect 
 	IPC1bits.DMA0IP = 6;
 	IPC1bits.OC2IP = 5;
 	IPC0bits.IC1IP = 3;
 	IPC21bits.USB1IP = 2;
+	IPC6bits.T4IP = 1;		
 
 	IFS1bits.INT1IF = 0;
 	IEC1bits.INT1IE = 1;
@@ -511,10 +511,10 @@ void init(void)
 	//			bufRead(&irRxBuffer);
 	//		}
 
-//	SYSTEM_Initialize(SYSTEM_STATE_USB_START);
-//
-//	USBDeviceInit();
-//	USBDeviceAttach();
+	SYSTEM_Initialize(SYSTEM_STATE_USB_START);
+
+	USBDeviceInit();
+	USBDeviceAttach();
 
 	//	while (1) {
 	//	}

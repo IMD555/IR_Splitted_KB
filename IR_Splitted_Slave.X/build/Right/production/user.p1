@@ -3247,198 +3247,198 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ < -> _c `ui -> -> 250 `i `ui 2154  ]
 [e :U 2155 ]
 }
-"284
-[; ;user.c: 284:  dataBuf[0] = ((5 + ((9) * 3))) + (5 + ((command & 0x7) * 3));
-[e = *U + &U _dataBuf * -> -> -> 0 `i `ui `ux -> -> # *U &U _dataBuf `ui `ux -> + + -> 5 `i * -> 9 `i -> 3 `i + -> 5 `i * & -> _command `i -> 7 `i -> 3 `i `us ]
-"287
-[; ;user.c: 287:  for (uint8_t c = 0; c < dataCount; c++) {
+"285
+[; ;user.c: 285:  dataBuf[0] = ((5 + ((9) * 3))) + (5 + ((command & 0x7) * 3)) + 20;
+[e = *U + &U _dataBuf * -> -> -> 0 `i `ui `ux -> -> # *U &U _dataBuf `ui `ux -> + + + -> 5 `i * -> 9 `i -> 3 `i + -> 5 `i * & -> _command `i -> 7 `i -> 3 `i -> 20 `i `us ]
+"288
+[; ;user.c: 288:  for (uint8_t c = 0; c < dataCount; c++) {
 {
 [v _c `uc ~T0 @X0 1 a ]
 [e = _c -> -> 0 `i `uc ]
 [e $U 2160  ]
 [e :U 2157 ]
 {
-"288
-[; ;user.c: 288:   dataBuf[c * 2 + 1] = dataBuf[c * 2] + (5 + ((data[c] >> 3) * 3));
-[e = *U + &U _dataBuf * -> -> + * -> _c `i -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _dataBuf `ui `ux -> + -> *U + &U _dataBuf * -> -> * -> _c `i -> 2 `i `ui `ux -> -> # *U &U _dataBuf `ui `ux `ui -> + -> 5 `i * >> -> *U + _data * -> _c `ux -> -> # *U _data `ui `ux `i -> 3 `i -> 3 `i `ui `us ]
 "289
-[; ;user.c: 289:   dataBuf[c * 2 + 2] = dataBuf[c * 2 + 1] + (5 + ((data[c] & 7) * 3));
-[e = *U + &U _dataBuf * -> -> + * -> _c `i -> 2 `i -> 2 `i `ui `ux -> -> # *U &U _dataBuf `ui `ux -> + -> *U + &U _dataBuf * -> -> + * -> _c `i -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _dataBuf `ui `ux `ui -> + -> 5 `i * & -> *U + _data * -> _c `ux -> -> # *U _data `ui `ux `i -> 7 `i -> 3 `i `ui `us ]
+[; ;user.c: 289:   dataBuf[c * 2 + 1] = dataBuf[c * 2] + (5 + ((data[c] >> 3) * 3));
+[e = *U + &U _dataBuf * -> -> + * -> _c `i -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _dataBuf `ui `ux -> + -> *U + &U _dataBuf * -> -> * -> _c `i -> 2 `i `ui `ux -> -> # *U &U _dataBuf `ui `ux `ui -> + -> 5 `i * >> -> *U + _data * -> _c `ux -> -> # *U _data `ui `ux `i -> 3 `i -> 3 `i `ui `us ]
 "290
-[; ;user.c: 290:  }
+[; ;user.c: 290:   dataBuf[c * 2 + 2] = dataBuf[c * 2 + 1] + (5 + ((data[c] & 7) * 3));
+[e = *U + &U _dataBuf * -> -> + * -> _c `i -> 2 `i -> 2 `i `ui `ux -> -> # *U &U _dataBuf `ui `ux -> + -> *U + &U _dataBuf * -> -> + * -> _c `i -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _dataBuf `ui `ux `ui -> + -> 5 `i * & -> *U + _data * -> _c `ux -> -> # *U _data `ui `ux `i -> 7 `i -> 3 `i `ui `us ]
+"291
+[; ;user.c: 291:  }
 }
 [e ++ _c -> -> 1 `i `uc ]
 [e :U 2160 ]
 [e $ < -> _c `i -> _dataCount `i 2157  ]
 [e :U 2158 ]
 }
-"292
-[; ;user.c: 292:  dataBuf[dataCount * 2 + 1] = dataBuf[dataCount * 2] + (5 + ((checksum(command,&data[0],dataCount)) * 3));
+"293
+[; ;user.c: 293:  dataBuf[dataCount * 2 + 1] = dataBuf[dataCount * 2] + (5 + ((checksum(command,&data[0],dataCount)) * 3));
 [e = *U + &U _dataBuf * -> -> + * -> _dataCount `i -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _dataBuf `ui `ux -> + -> *U + &U _dataBuf * -> -> * -> _dataCount `i -> 2 `i `ui `ux -> -> # *U &U _dataBuf `ui `ux `ui -> + -> 5 `i * -> ( _checksum (3 , , _command &U *U + _data * -> -> 0 `i `x -> -> # *U _data `i `x _dataCount `i -> 3 `i `ui `us ]
-"294
-[; ;user.c: 294:  dataBuf[dataCount * 2 + 2] = dataBuf[dataCount * 2 + 1] + ((5 + ((10) * 3)));
+"295
+[; ;user.c: 295:  dataBuf[dataCount * 2 + 2] = dataBuf[dataCount * 2 + 1] + ((5 + ((10) * 3)));
 [e = *U + &U _dataBuf * -> -> + * -> _dataCount `i -> 2 `i -> 2 `i `ui `ux -> -> # *U &U _dataBuf `ui `ux -> + -> *U + &U _dataBuf * -> -> + * -> _dataCount `i -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _dataBuf `ui `ux `ui -> + -> 5 `i * -> 10 `i -> 3 `i `ui `us ]
-"297
-[; ;user.c: 297:  DMA1CON0 = 0x00;
-[e = _DMA1CON0 -> -> 0 `i `uc ]
 "298
-[; ;user.c: 298:  DMA1SSA = &dataBuf[0];
-[e = _DMA1SSA -> &U *U + &U _dataBuf * -> -> -> 0 `i `ui `ux -> -> # *U &U _dataBuf `ui `ux `um ]
+[; ;user.c: 298:  DMA1CON0 = 0x00;
+[e = _DMA1CON0 -> -> 0 `i `uc ]
 "299
-[; ;user.c: 299:  DMA1DSA = &CCPR1;
-[e = _DMA1DSA -> &U _CCPR1 `us ]
+[; ;user.c: 299:  DMA1SSA = &dataBuf[0];
+[e = _DMA1SSA -> &U *U + &U _dataBuf * -> -> -> 0 `i `ui `ux -> -> # *U &U _dataBuf `ui `ux `um ]
 "300
-[; ;user.c: 300:  DMA1CON1 = 0x43;
-[e = _DMA1CON1 -> -> 67 `i `uc ]
+[; ;user.c: 300:  DMA1DSA = &CCPR1;
+[e = _DMA1DSA -> &U _CCPR1 `us ]
 "301
-[; ;user.c: 301:  DMA1SSZ = 6 + dataCount * 4;
-[e = _DMA1SSZ -> + -> 6 `i * -> _dataCount `i -> 4 `i `us ]
+[; ;user.c: 301:  DMA1CON1 = 0x43;
+[e = _DMA1CON1 -> -> 67 `i `uc ]
 "302
-[; ;user.c: 302:  DMA1DSZ = 2;
+[; ;user.c: 302:  DMA1SSZ = 6 + dataCount * 4;
+[e = _DMA1SSZ -> + -> 6 `i * -> _dataCount `i -> 4 `i `us ]
+"303
+[; ;user.c: 303:  DMA1DSZ = 2;
 [e = _DMA1DSZ -> -> 2 `i `us ]
-"304
-[; ;user.c: 304:  DMA1SIRQ = 35;
+"305
+[; ;user.c: 305:  DMA1SIRQ = 35;
 [e = _DMA1SIRQ -> -> 35 `i `uc ]
-"306
-[; ;user.c: 306:  CCPR1 = 0 + ((5 + ((9) * 3)));
-[e = _CCPR1 -> + -> 0 `i + -> 5 `i * -> 9 `i -> 3 `i `us ]
-"307
-[; ;user.c: 307:  TMR3H = 0xff;
-[e = _TMR3H -> -> 255 `i `uc ]
 "308
-[; ;user.c: 308:  TMR3L = 0xff;
-[e = _TMR3L -> -> 255 `i `uc ]
+[; ;user.c: 308:  CCPR1 = 0 + ((5 + ((9) * 3))) + 20;
+[e = _CCPR1 -> + + -> 0 `i + -> 5 `i * -> 9 `i -> 3 `i -> 20 `i `us ]
+"309
+[; ;user.c: 309:  TMR3H = 0xff;
+[e = _TMR3H -> -> 255 `i `uc ]
 "310
-[; ;user.c: 310:  TMR2= 0xff;
-[e = _TMR2 -> -> 255 `i `uc ]
-"311
-[; ;user.c: 311:  CLC1POLbits.G3POL =1;
-[e = . . _CLC1POLbits 0 2 -> -> 1 `i `uc ]
+[; ;user.c: 310:  TMR3L = 0xff;
+[e = _TMR3L -> -> 255 `i `uc ]
 "312
-[; ;user.c: 312:  CLC1POLbits.G3POL =0;
-[e = . . _CLC1POLbits 0 2 -> -> 0 `i `uc ]
+[; ;user.c: 312:  TMR2= 0xff;
+[e = _TMR2 -> -> 255 `i `uc ]
+"313
+[; ;user.c: 313:  CLC1POLbits.G3POL =1;
+[e = . . _CLC1POLbits 0 2 -> -> 1 `i `uc ]
 "314
-[; ;user.c: 314:  MD1CON0bits.EN = 1;
+[; ;user.c: 314:  CLC1POLbits.G3POL =0;
+[e = . . _CLC1POLbits 0 2 -> -> 0 `i `uc ]
+"316
+[; ;user.c: 316:  MD1CON0bits.EN = 1;
 [e = . . _MD1CON0bits 0 5 -> -> 1 `i `uc ]
-"315
-[; ;user.c: 315:  CCP1CONbits.EN = 1;
-[e = . . _CCP1CONbits 0 4 -> -> 1 `i `uc ]
 "317
-[; ;user.c: 317:  T3CONbits.ON = 1;
-[e = . . _T3CONbits 0 0 -> -> 1 `i `uc ]
-"318
-[; ;user.c: 318:  DMA1CON0bits.EN = 1;
-[e = . . _DMA1CON0bits 0 6 -> -> 1 `i `uc ]
+[; ;user.c: 317:  CCP1CONbits.EN = 1;
+[e = . . _CCP1CONbits 0 4 -> -> 1 `i `uc ]
 "319
-[; ;user.c: 319:  DMA1CON0bits.SIRQEN = 1;
-[e = . . _DMA1CON0bits 0 5 -> -> 1 `i `uc ]
+[; ;user.c: 319:  T3CONbits.ON = 1;
+[e = . . _T3CONbits 0 0 -> -> 1 `i `uc ]
 "320
-[; ;user.c: 320:  CCP1CONbits.MODE = 0x09;
-[e = . . _CCP1CONbits 0 0 -> -> 9 `i `uc ]
+[; ;user.c: 320:  DMA1CON0bits.EN = 1;
+[e = . . _DMA1CON0bits 0 6 -> -> 1 `i `uc ]
 "321
-[; ;user.c: 321:  T2CONbits.ON = 1;
-[e = . . _T2CONbits 0 2 -> -> 1 `i `uc ]
+[; ;user.c: 321:  DMA1CON0bits.SIRQEN = 1;
+[e = . . _DMA1CON0bits 0 5 -> -> 1 `i `uc ]
 "322
-[; ;user.c: 322:  CCP1CONbits.MODE = 0x02;
-[e = . . _CCP1CONbits 0 0 -> -> 2 `i `uc ]
+[; ;user.c: 322:  CCP1CONbits.MODE = 0x09;
+[e = . . _CCP1CONbits 0 0 -> -> 9 `i `uc ]
+"323
+[; ;user.c: 323:  T2CONbits.ON = 1;
+[e = . . _T2CONbits 0 2 -> -> 1 `i `uc ]
 "324
-[; ;user.c: 324:  LATA6 = 1;
-[e = _LATA6 -> -> 1 `i `b ]
+[; ;user.c: 324:  CCP1CONbits.MODE = 0x02;
+[e = . . _CCP1CONbits 0 0 -> -> 2 `i `uc ]
 "326
-[; ;user.c: 326:  PIR2bits.DMA1SCNTIF = 0;
+[; ;user.c: 326:  LATA6 = 1;
+[e = _LATA6 -> -> 1 `i `b ]
+"328
+[; ;user.c: 328:  PIR2bits.DMA1SCNTIF = 0;
 [e = . . _PIR2bits 0 0 -> -> 0 `i `uc ]
-"329
-[; ;user.c: 329:  CPUDOZEbits.DOZE = 7;
-[e = . . _CPUDOZEbits 0 0 -> -> 7 `i `uc ]
-"330
-[; ;user.c: 330:  ROI = 1;
-[e = _ROI -> -> 1 `i `b ]
 "331
-[; ;user.c: 331:  DOE = 1;
-[e = _DOE -> -> 1 `i `b ]
+[; ;user.c: 331:  CPUDOZEbits.DOZE = 7;
+[e = . . _CPUDOZEbits 0 0 -> -> 7 `i `uc ]
 "332
-[; ;user.c: 332:  DOZEN = 1;
-[e = _DOZEN -> -> 1 `i `b ]
+[; ;user.c: 332:  ROI = 1;
+[e = _ROI -> -> 1 `i `b ]
+"333
+[; ;user.c: 333:  DOE = 1;
+[e = _DOE -> -> 1 `i `b ]
 "334
-[; ;user.c: 334:  while (!PIR2bits.DMA1SCNTIF);
+[; ;user.c: 334:  DOZEN = 1;
+[e = _DOZEN -> -> 1 `i `b ]
+"336
+[; ;user.c: 336:  while (!PIR2bits.DMA1SCNTIF);
 [e $U 2161  ]
 [e :U 2162 ]
 [e :U 2161 ]
 [e $ ! != -> . . _PIR2bits 0 0 `i -> 0 `i 2162  ]
 [e :U 2163 ]
-"336
-[; ;user.c: 336:  MD1CON0bits.EN = 0;
-[e = . . _MD1CON0bits 0 5 -> -> 0 `i `uc ]
 "338
-[; ;user.c: 338:  CCP1IF = 0;
+[; ;user.c: 338:  MD1CON0bits.EN = 0;
+[e = . . _MD1CON0bits 0 5 -> -> 0 `i `uc ]
+"340
+[; ;user.c: 340:  CCP1IF = 0;
 [e = _CCP1IF -> -> 0 `i `b ]
-"341
-[; ;user.c: 341:  DOZEN = 0;
+"343
+[; ;user.c: 343:  DOZEN = 0;
 [e = _DOZEN -> -> 0 `i `b ]
-"342
-[; ;user.c: 342:  while (!CCP1IF);
+"344
+[; ;user.c: 344:  while (!CCP1IF);
 [e $U 2164  ]
 [e :U 2165 ]
 [e :U 2164 ]
 [e $ ! _CCP1IF 2165  ]
 [e :U 2166 ]
-"344
-[; ;user.c: 344:  DOZEN = 0;
-[e = _DOZEN -> -> 0 `i `b ]
 "346
-[; ;user.c: 346:  CCP1CONbits.EN = 0;
-[e = . . _CCP1CONbits 0 4 -> -> 0 `i `uc ]
-"347
-[; ;user.c: 347:  T3CONbits.ON = 0;
-[e = . . _T3CONbits 0 0 -> -> 0 `i `uc ]
+[; ;user.c: 346:  DOZEN = 0;
+[e = _DOZEN -> -> 0 `i `b ]
 "348
-[; ;user.c: 348:  T2CONbits.ON = 0;
+[; ;user.c: 348:  CCP1CONbits.EN = 0;
+[e = . . _CCP1CONbits 0 4 -> -> 0 `i `uc ]
+"349
+[; ;user.c: 349:  T3CONbits.ON = 0;
+[e = . . _T3CONbits 0 0 -> -> 0 `i `uc ]
+"350
+[; ;user.c: 350:  T2CONbits.ON = 0;
 [e = . . _T2CONbits 0 2 -> -> 0 `i `uc ]
-"355
-[; ;user.c: 355:  LATA6 = 0;
+"357
+[; ;user.c: 357:  LATA6 = 0;
 [e = _LATA6 -> -> 0 `i `b ]
-"362
-[; ;user.c: 362:  SMT1PWAIF = 0;
-[e = _SMT1PWAIF -> -> 0 `i `b ]
-"363
-[; ;user.c: 363:  SMT1PWAIE = 1;
-[e = _SMT1PWAIE -> -> 1 `i `b ]
 "364
-[; ;user.c: 364: }
+[; ;user.c: 364:  SMT1PWAIF = 0;
+[e = _SMT1PWAIF -> -> 0 `i `b ]
+"365
+[; ;user.c: 365:  SMT1PWAIE = 1;
+[e = _SMT1PWAIE -> -> 1 `i `b ]
+"366
+[; ;user.c: 366: }
 [e :UE 2153 ]
 }
-"366
-[; ;user.c: 366: uint8_t CRC3(uint8_t data, uint8_t dataLength)
+"368
+[; ;user.c: 368: uint8_t CRC3(uint8_t data, uint8_t dataLength)
 [v _CRC3 `(uc ~T0 @X0 1 ef2`uc`uc ]
-"367
-[; ;user.c: 367: {
+"369
+[; ;user.c: 369: {
 {
 [e :U _CRC3 ]
-"366
-[; ;user.c: 366: uint8_t CRC3(uint8_t data, uint8_t dataLength)
+"368
+[; ;user.c: 368: uint8_t CRC3(uint8_t data, uint8_t dataLength)
 [v _data `uc ~T0 @X0 1 r1 ]
 [v _dataLength `uc ~T0 @X0 1 r2 ]
-"367
-[; ;user.c: 367: {
+"369
+[; ;user.c: 369: {
 [f ]
-"368
-[; ;user.c: 368:  return 0x02;
+"370
+[; ;user.c: 370:  return 0x02;
 [e ) -> -> 2 `i `uc ]
 [e $UE 2167  ]
-"369
-[; ;user.c: 369:  CRCXOR = 0x0000;
-[e = _CRCXOR -> -> 0 `i `us ]
-"370
-[; ;user.c: 370:  CRCCON0 = 0x90;
-[e = _CRCCON0 -> -> 144 `i `uc ]
 "371
-[; ;user.c: 371:  CRCCON1 = 0x03 | (dataLength << 4);
-[e = _CRCCON1 -> | -> 3 `i << -> _dataLength `i -> 4 `i `uc ]
+[; ;user.c: 371:  CRCXOR = 0x0000;
+[e = _CRCXOR -> -> 0 `i `us ]
+"372
+[; ;user.c: 372:  CRCCON0 = 0x90;
+[e = _CRCCON0 -> -> 144 `i `uc ]
 "373
-[; ;user.c: 373:  return data & 0x07;
+[; ;user.c: 373:  CRCCON1 = 0x03 | (dataLength << 4);
+[e = _CRCCON1 -> | -> 3 `i << -> _dataLength `i -> 4 `i `uc ]
+"375
+[; ;user.c: 375:  return data & 0x07;
 [e ) -> & -> _data `i -> 7 `i `uc ]
 [e $UE 2167  ]
-"374
-[; ;user.c: 374: };
+"376
+[; ;user.c: 376: };
 [e :UE 2167 ]
 }

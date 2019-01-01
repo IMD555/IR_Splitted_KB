@@ -37,6 +37,7 @@ unsigned char bufRead(struct ringBuf *b)
 		b->readIndex = 0;
 	}
 #endif
+	if (b->readIndex == 0)		CVRCONbits.CVR++;
 	return d;
 }
 

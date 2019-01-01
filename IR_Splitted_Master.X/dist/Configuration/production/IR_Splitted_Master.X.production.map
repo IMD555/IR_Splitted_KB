@@ -76,13 +76,13 @@ xc16-ld 1.35 (A)
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0x200               0x326           0x4b9  (1209)
-.const                       0x526               0x296           0x3e1  (993)
-.text                        0x7bc              0x1fc6          0x2fa9  (12201)
-.dinit                      0x2782                0x7e            0xbd  (189)
-.text                       0x2800               0x1e4           0x2d6  (726)
+.text                        0x200               0x304           0x486  (1158)
+.const                       0x504               0x296           0x3e1  (993)
+.text                        0x79a              0x2564          0x3816  (14358)
+.dinit                      0x2cfe                0x7e            0xbd  (189)
+.text                       0x2d7c               0x1e4           0x2d6  (726)
 
-                 Total "program" memory used (bytes):         0x3bd6  (15318) 23%
+                 Total "program" memory used (bytes):         0x4410  (17424) 26%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -96,7 +96,7 @@ section                    address      alignment gaps    total length  (dec)
 .nbss                        0x856                   0             0x2  (2)
 .bss                         0x858                   0           0x23c  (572)
 .bss                         0xa94                   0            0x80  (128)
-_059C8DE05c260245            0xc00                   0            0x20  (32)
+_05078DE05c2b5a10            0xc00                   0            0x20  (32)
 
                  Total "data" memory used (bytes):          0x334  (820) 10%
 
@@ -213,145 +213,143 @@ External Symbols in Program Memory (by address):
 
                   0x000200                  __resetPRI
                   0x00023c                  __psv_init
-                  0x000252                  __data_init_da
                   0x000252                  __data_init
+                  0x000252                  __data_init_da
                   0x000308                  __USB1Interrupt
-                  0x000334                  __T3Interrupt
-                  0x000356                  __IC1Interrupt
-                  0x0004a8                  __INT1Interrupt
-                  0x000504                  __DefaultInterrupt
-                  0x00050a                  _memcpy
-                  0x000518                  _memset
-                  0x000526                  _keymap
-                  0x0005e6                  _keymapFn
-                  0x0006a6                  _device_dsc
-                  0x0006b8                  _configDescriptor1
-                  0x0006e2                  _sd000
-                  0x0006e6                  _sd001
-                  0x00071a                  _sd002
-                  0x000736                  _USB_CD_Ptr
-                  0x000738                  _USB_SD_Ptr
-                  0x00073e                  _hid_rpt01
-                  0x0007bc                  _USBDeviceInit
-                  0x0008b2                  _USBDeviceTasks
-                  0x000a3c                  _USBEnableEndpoint
-                  0x000a76                  _USBTransferOnePacket
-                  0x000b1c                  _USBStallEndpoint
-                  0x000bb6                  _USBCancelIO
-                  0x000c6a                  _USBDeviceDetach
-                  0x000c76                  _USBDeviceAttach
-                  0x000caa                  _USBCtrlEPAllowStatusStage
-                  0x000d20                  _USBCtrlEPAllowDataStage
-                  0x00171e                  _USBIncrement1msInternalTimers
-                  0x001748                  _USBGet1msTickCount
-                  0x001762                  _main
-                  0x00179e                  _checkTimeout
-                  0x001814                  _decodeReport
-                  0x001b1e                  _waitReport
-                  0x001b84                  _sendReport
-                  0x001d04                  _init
-                  0x001e20                  _swInit
-                  0x001e7e                  _swUnregister
-                  0x002018                  _swRegister
-                  0x0021a4                  _USBSleepOnSuspend
-                  0x0021c8                  _USBRemoteWakeupAssertBlocking
-                  0x002242                  _USBVBUSSessionValidStateGet
-                  0x0022cc                  _USBMaskAllUSBInterrupts
-                  0x0022e6                  _USBRestoreUSBInterrupts
-                  0x0023c0                  _LED_On
-                  0x0023f2                  _LED_Off
-                  0x002424                  _LED_Toggle
-                  0x0024b6                  _LED_Get
-                  0x00251e                  _LED_Enable
-                  0x002550                  _USBCheckHIDRequest
-                  0x002640                  _APP_KeyboardInit
-                  0x00266e                  _APP_KeyboardTasks
-                  0x00267a                  build/Configuration/production/app_device_keyboard.o:_USBHIDCBSetReportComplete
-                  0x00268a                  _USBHIDCBSetReportHandler
-                  0x0026e2                  _USBHIDCBSetIdleRateHandler
-                  0x0026f8                  _bufWrite
-                  0x002718                  _bufWriteIntIC1
-                  0x002738                  _bufRead
-                  0x002756                  _bufClear
-                  0x002766                  _bufInit
-                  0x002800                  _USER_USB_CALLBACK_EVENT_HANDLER
-                  0x002878                  _APP_LEDUpdateUSBStatus
-                  0x0028ec                  _BUTTON_IsPressed
-                  0x002934                  _BUTTON_Enable
-                  0x00295a                  _checksum
-                  0x0029b4                  _SYSTEM_Initialize
+                  0x000334                  __IC1Interrupt
+                  0x000486                  __INT1Interrupt
+                  0x0004e2                  __DefaultInterrupt
+                  0x0004e8                  _memcpy
+                  0x0004f6                  _memset
+                  0x000504                  _keymap
+                  0x0005c4                  _keymapFn
+                  0x000684                  _device_dsc
+                  0x000696                  _configDescriptor1
+                  0x0006c0                  _sd000
+                  0x0006c4                  _sd001
+                  0x0006f8                  _sd002
+                  0x000714                  _USB_CD_Ptr
+                  0x000716                  _USB_SD_Ptr
+                  0x00071c                  _hid_rpt01
+                  0x00079a                  _USBDeviceInit
+                  0x000890                  _USBDeviceTasks
+                  0x000a1a                  _USBEnableEndpoint
+                  0x000a54                  _USBTransferOnePacket
+                  0x000afa                  _USBStallEndpoint
+                  0x000b94                  _USBCancelIO
+                  0x000c48                  _USBDeviceDetach
+                  0x000c54                  _USBDeviceAttach
+                  0x000c88                  _USBCtrlEPAllowStatusStage
+                  0x000cfe                  _USBCtrlEPAllowDataStage
+                  0x0016fc                  _USBIncrement1msInternalTimers
+                  0x001726                  _USBGet1msTickCount
+                  0x001740                  _main
+                  0x00177c                  _checkTimeout
+                  0x0017f2                  _decodeReport
+                  0x001b10                  _waitReport
+                  0x001b5e                  _sendReport
+                  0x001cac                  _init
+                  0x001dd0                  _APP_KeyboardInit
+                  0x001dfe                  _APP_KeyboardTasks
+                  0x0023b6                  build/Configuration/production/app_device_keyboard.o:_USBHIDCBSetReportComplete
+                  0x0023c6                  _USBHIDCBSetReportHandler
+                  0x00241e                  _USBHIDCBSetIdleRateHandler
+                  0x002434                  _swInit
+                  0x002492                  _swUnregister
+                  0x00262c                  _swRegister
+                  0x0027b8                  _USBSleepOnSuspend
+                  0x0027dc                  _USBRemoteWakeupAssertBlocking
+                  0x002856                  _USBVBUSSessionValidStateGet
+                  0x0028e0                  _USBMaskAllUSBInterrupts
+                  0x0028fa                  _USBRestoreUSBInterrupts
+                  0x0029d4                  _LED_On
+                  0x002a06                  _LED_Off
+                  0x002a38                  _LED_Toggle
+                  0x002aca                  _LED_Get
+                  0x002b32                  _LED_Enable
+                  0x002b64                  _USBCheckHIDRequest
+                  0x002c54                  _bufWrite
+                  0x002c74                  _bufWriteIntIC1
+                  0x002c94                  _bufRead
+                  0x002cd2                  _bufClear
+                  0x002ce2                  _bufInit
+                  0x002d7c                  _USER_USB_CALLBACK_EVENT_HANDLER
+                  0x002df4                  _APP_LEDUpdateUSBStatus
+                  0x002e68                  _BUTTON_IsPressed
+                  0x002eb0                  _BUTTON_Enable
+                  0x002ed6                  _checksum
+                  0x002f30                  _SYSTEM_Initialize
 
 External Symbols in Program Memory (by name):
 
-                  0x002640                  _APP_KeyboardInit
-                  0x00266e                  _APP_KeyboardTasks
-                  0x002878                  _APP_LEDUpdateUSBStatus
-                  0x002934                  _BUTTON_Enable
-                  0x0028ec                  _BUTTON_IsPressed
-                  0x00251e                  _LED_Enable
-                  0x0024b6                  _LED_Get
-                  0x0023f2                  _LED_Off
-                  0x0023c0                  _LED_On
-                  0x002424                  _LED_Toggle
-                  0x0029b4                  _SYSTEM_Initialize
-                  0x000bb6                  _USBCancelIO
-                  0x002550                  _USBCheckHIDRequest
-                  0x000d20                  _USBCtrlEPAllowDataStage
-                  0x000caa                  _USBCtrlEPAllowStatusStage
-                  0x000c76                  _USBDeviceAttach
-                  0x000c6a                  _USBDeviceDetach
-                  0x0007bc                  _USBDeviceInit
-                  0x0008b2                  _USBDeviceTasks
-                  0x000a3c                  _USBEnableEndpoint
-                  0x001748                  _USBGet1msTickCount
-                  0x0026e2                  _USBHIDCBSetIdleRateHandler
-                  0x00268a                  _USBHIDCBSetReportHandler
-                  0x00171e                  _USBIncrement1msInternalTimers
-                  0x0022cc                  _USBMaskAllUSBInterrupts
-                  0x0021c8                  _USBRemoteWakeupAssertBlocking
-                  0x0022e6                  _USBRestoreUSBInterrupts
-                  0x0021a4                  _USBSleepOnSuspend
-                  0x000b1c                  _USBStallEndpoint
-                  0x000a76                  _USBTransferOnePacket
-                  0x002242                  _USBVBUSSessionValidStateGet
-                  0x000736                  _USB_CD_Ptr
-                  0x000738                  _USB_SD_Ptr
-                  0x002800                  _USER_USB_CALLBACK_EVENT_HANDLER
-                  0x000504                  __DefaultInterrupt
-                  0x000356                  __IC1Interrupt
-                  0x0004a8                  __INT1Interrupt
-                  0x000334                  __T3Interrupt
+                  0x001dd0                  _APP_KeyboardInit
+                  0x001dfe                  _APP_KeyboardTasks
+                  0x002df4                  _APP_LEDUpdateUSBStatus
+                  0x002eb0                  _BUTTON_Enable
+                  0x002e68                  _BUTTON_IsPressed
+                  0x002b32                  _LED_Enable
+                  0x002aca                  _LED_Get
+                  0x002a06                  _LED_Off
+                  0x0029d4                  _LED_On
+                  0x002a38                  _LED_Toggle
+                  0x002f30                  _SYSTEM_Initialize
+                  0x000b94                  _USBCancelIO
+                  0x002b64                  _USBCheckHIDRequest
+                  0x000cfe                  _USBCtrlEPAllowDataStage
+                  0x000c88                  _USBCtrlEPAllowStatusStage
+                  0x000c54                  _USBDeviceAttach
+                  0x000c48                  _USBDeviceDetach
+                  0x00079a                  _USBDeviceInit
+                  0x000890                  _USBDeviceTasks
+                  0x000a1a                  _USBEnableEndpoint
+                  0x001726                  _USBGet1msTickCount
+                  0x00241e                  _USBHIDCBSetIdleRateHandler
+                  0x0023c6                  _USBHIDCBSetReportHandler
+                  0x0016fc                  _USBIncrement1msInternalTimers
+                  0x0028e0                  _USBMaskAllUSBInterrupts
+                  0x0027dc                  _USBRemoteWakeupAssertBlocking
+                  0x0028fa                  _USBRestoreUSBInterrupts
+                  0x0027b8                  _USBSleepOnSuspend
+                  0x000afa                  _USBStallEndpoint
+                  0x000a54                  _USBTransferOnePacket
+                  0x002856                  _USBVBUSSessionValidStateGet
+                  0x000714                  _USB_CD_Ptr
+                  0x000716                  _USB_SD_Ptr
+                  0x002d7c                  _USER_USB_CALLBACK_EVENT_HANDLER
+                  0x0004e2                  __DefaultInterrupt
+                  0x000334                  __IC1Interrupt
+                  0x000486                  __INT1Interrupt
                   0x000308                  __USB1Interrupt
                   0x000252                  __data_init
                   0x000252                  __data_init_da
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
-                  0x002756                  _bufClear
-                  0x002766                  _bufInit
-                  0x002738                  _bufRead
-                  0x0026f8                  _bufWrite
-                  0x002718                  _bufWriteIntIC1
-                  0x00179e                  _checkTimeout
-                  0x00295a                  _checksum
-                  0x0006b8                  _configDescriptor1
-                  0x001814                  _decodeReport
-                  0x0006a6                  _device_dsc
-                  0x00073e                  _hid_rpt01
-                  0x001d04                  _init
-                  0x000526                  _keymap
-                  0x0005e6                  _keymapFn
-                  0x001762                  _main
-                  0x00050a                  _memcpy
-                  0x000518                  _memset
-                  0x0006e2                  _sd000
-                  0x0006e6                  _sd001
-                  0x00071a                  _sd002
-                  0x001b84                  _sendReport
-                  0x001e20                  _swInit
-                  0x002018                  _swRegister
-                  0x001e7e                  _swUnregister
-                  0x001b1e                  _waitReport
-                  0x00267a                  build/Configuration/production/app_device_keyboard.o:_USBHIDCBSetReportComplete
+                  0x002cd2                  _bufClear
+                  0x002ce2                  _bufInit
+                  0x002c94                  _bufRead
+                  0x002c54                  _bufWrite
+                  0x002c74                  _bufWriteIntIC1
+                  0x00177c                  _checkTimeout
+                  0x002ed6                  _checksum
+                  0x000696                  _configDescriptor1
+                  0x0017f2                  _decodeReport
+                  0x000684                  _device_dsc
+                  0x00071c                  _hid_rpt01
+                  0x001cac                  _init
+                  0x000504                  _keymap
+                  0x0005c4                  _keymapFn
+                  0x001740                  _main
+                  0x0004e8                  _memcpy
+                  0x0004f6                  _memset
+                  0x0006c0                  _sd000
+                  0x0006c4                  _sd001
+                  0x0006f8                  _sd002
+                  0x001b5e                  _sendReport
+                  0x002434                  _swInit
+                  0x00262c                  _swRegister
+                  0x002492                  _swUnregister
+                  0x001b10                  _waitReport
+                  0x0023b6                  build/Configuration/production/app_device_keyboard.o:_USBHIDCBSetReportComplete
 
 Memory Configuration
 
@@ -405,7 +403,7 @@ LOAD c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libfx-elf.a
                   0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x000200        0x326
+.text             0x000200        0x304
  *(.init)
  .init            0x000200         0x4c c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libpic30-elf.a(crt0_extended24.o)
                   0x000200                  __resetPRI
@@ -417,25 +415,24 @@ LOAD c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libfx-elf.a
  *(.user_init)
  *(.handle)
  *(.isr*)
- .isr.text        0x000308        0x1fc build/Configuration/production/system.o
+ .isr.text        0x000308        0x1da build/Configuration/production/system.o
                   0x000308                  __USB1Interrupt
-                  0x000334                  __T3Interrupt
-                  0x000356                  __IC1Interrupt
-                  0x0004a8                  __INT1Interrupt
- .isr             0x000504          0x4 default_isr
-                  0x000504                  __DefaultInterrupt
+                  0x000334                  __IC1Interrupt
+                  0x000486                  __INT1Interrupt
+ .isr             0x0004e2          0x4 default_isr
+                  0x0004e2                  __DefaultInterrupt
  *(.libc)
  *(.libm)
  *(.libdsp)
  *(.lib*)
  .libpic30_crt_start_mode
-                  0x000508          0x2 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libpic30-elf.a(crt_start_mode_normalda.eo)
-                  0x000508                  __crt_start_mode
-                  0x000508                  __crt_start_mode_normal
- .libc.memcpy     0x00050a          0xe c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libc-elf.a(memcpy.daeo)
-                  0x00050a                  _memcpy
- .libc.memset     0x000518          0xe c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libc-elf.a(memset.daeo)
-                  0x000518                  _memset
+                  0x0004e6          0x2 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libpic30-elf.a(crt_start_mode_normalda.eo)
+                  0x0004e6                  __crt_start_mode
+                  0x0004e6                  __crt_start_mode_normal
+ .libc.memcpy     0x0004e8          0xe c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libc-elf.a(memcpy.daeo)
+                  0x0004e8                  _memcpy
+ .libc.memset     0x0004f6          0xe c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libc-elf.a(memset.daeo)
+                  0x0004f6                  _memset
 
 usercode
  *(usercode)
@@ -455,7 +452,7 @@ __CONFIG1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0xc774
+.debug_info       0x000000       0xc917
  *(.debug_info)
  .debug_info      0x000000        0x6cb build/Configuration/production/leds.o
  .debug_info      0x0006cb        0x642 build/Configuration/production/buttons.o
@@ -464,16 +461,16 @@ __CONFIG1
  .debug_info      0x003f79        0xbfd build/Configuration/production/usb_device_hid.o
  .debug_info      0x004b76        0x5fd build/Configuration/production/usb_events.o
  .debug_info      0x005173       0x131d build/Configuration/production/usb_hal_16bit.o
- .debug_info      0x006490       0x1131 build/Configuration/production/system.o
- .debug_info      0x0075c1       0x1150 build/Configuration/production/app_device_keyboard.o
- .debug_info      0x008711       0x3225 build/Configuration/production/main.o
- .debug_info      0x00b936        0x38d build/Configuration/production/app_led_usb_status.o
- .debug_info      0x00bcc3        0x2e9 build/Configuration/production/ringBuffer.o
- .debug_info      0x00bfac        0x601 build/Configuration/production/swMatrix.o
- .debug_info      0x00c5ad        0x1c7 build/Configuration/production/_ext/1472/IR_format.o
+ .debug_info      0x006490       0x1116 build/Configuration/production/system.o
+ .debug_info      0x0075a6       0x12a7 build/Configuration/production/app_device_keyboard.o
+ .debug_info      0x00884d       0x30fd build/Configuration/production/main.o
+ .debug_info      0x00b94a        0x38d build/Configuration/production/app_led_usb_status.o
+ .debug_info      0x00bcd7        0x478 build/Configuration/production/ringBuffer.o
+ .debug_info      0x00c14f        0x601 build/Configuration/production/swMatrix.o
+ .debug_info      0x00c750        0x1c7 build/Configuration/production/_ext/1472/IR_format.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000       0x124d
+.debug_abbrev     0x000000       0x12d6
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0xca build/Configuration/production/leds.o
  .debug_abbrev    0x0000ca         0xca build/Configuration/production/buttons.o
@@ -483,14 +480,14 @@ __CONFIG1
  .debug_abbrev    0x00068a         0xa7 build/Configuration/production/usb_events.o
  .debug_abbrev    0x000731        0x1c6 build/Configuration/production/usb_hal_16bit.o
  .debug_abbrev    0x0008f7        0x1bc build/Configuration/production/system.o
- .debug_abbrev    0x000ab3        0x258 build/Configuration/production/app_device_keyboard.o
- .debug_abbrev    0x000d0b        0x202 build/Configuration/production/main.o
- .debug_abbrev    0x000f0d         0xdb build/Configuration/production/app_led_usb_status.o
- .debug_abbrev    0x000fe8         0xc4 build/Configuration/production/ringBuffer.o
- .debug_abbrev    0x0010ac        0x12c build/Configuration/production/swMatrix.o
- .debug_abbrev    0x0011d8         0x75 build/Configuration/production/_ext/1472/IR_format.o
+ .debug_abbrev    0x000ab3        0x26e build/Configuration/production/app_device_keyboard.o
+ .debug_abbrev    0x000d21        0x202 build/Configuration/production/main.o
+ .debug_abbrev    0x000f23         0xdb build/Configuration/production/app_led_usb_status.o
+ .debug_abbrev    0x000ffe        0x137 build/Configuration/production/ringBuffer.o
+ .debug_abbrev    0x001135        0x12c build/Configuration/production/swMatrix.o
+ .debug_abbrev    0x001261         0x75 build/Configuration/production/_ext/1472/IR_format.o
 
-.debug_line       0x000000       0x131a
+.debug_line       0x000000       0x143d
  *(.debug_line)
  .debug_line      0x000000        0x157 build/Configuration/production/leds.o
  .debug_line      0x000157        0x100 build/Configuration/production/buttons.o
@@ -499,15 +496,15 @@ __CONFIG1
  .debug_line      0x00070f        0x117 build/Configuration/production/usb_device_hid.o
  .debug_line      0x000826         0xe4 build/Configuration/production/usb_events.o
  .debug_line      0x00090a        0x17c build/Configuration/production/usb_hal_16bit.o
- .debug_line      0x000a86        0x18f build/Configuration/production/system.o
- .debug_line      0x000c15        0x173 build/Configuration/production/app_device_keyboard.o
- .debug_line      0x000d88        0x22d build/Configuration/production/main.o
- .debug_line      0x000fb5        0x12c build/Configuration/production/app_led_usb_status.o
- .debug_line      0x0010e1         0xac build/Configuration/production/ringBuffer.o
- .debug_line      0x00118d         0xfd build/Configuration/production/swMatrix.o
- .debug_line      0x00128a         0x90 build/Configuration/production/_ext/1472/IR_format.o
+ .debug_line      0x000a86        0x187 build/Configuration/production/system.o
+ .debug_line      0x000c0d        0x238 build/Configuration/production/app_device_keyboard.o
+ .debug_line      0x000e45        0x234 build/Configuration/production/main.o
+ .debug_line      0x001079        0x12c build/Configuration/production/app_led_usb_status.o
+ .debug_line      0x0011a5        0x10b build/Configuration/production/ringBuffer.o
+ .debug_line      0x0012b0         0xfd build/Configuration/production/swMatrix.o
+ .debug_line      0x0013ad         0x90 build/Configuration/production/_ext/1472/IR_format.o
 
-.debug_frame      0x000000        0x930
+.debug_frame      0x000000        0x90c
  *(.debug_frame)
  .debug_frame     0x000000         0xa0 build/Configuration/production/leds.o
  .debug_frame     0x0000a0         0x4c build/Configuration/production/buttons.o
@@ -515,13 +512,13 @@ __CONFIG1
  .debug_frame     0x000410         0x30 build/Configuration/production/usb_device_hid.o
  .debug_frame     0x000440         0x30 build/Configuration/production/usb_events.o
  .debug_frame     0x000470         0xd8 build/Configuration/production/usb_hal_16bit.o
- .debug_frame     0x000548         0xfc build/Configuration/production/system.o
- .debug_frame     0x000644         0xbc build/Configuration/production/app_device_keyboard.o
- .debug_frame     0x000700         0xc8 build/Configuration/production/main.o
- .debug_frame     0x0007c8         0x30 build/Configuration/production/app_led_usb_status.o
- .debug_frame     0x0007f8         0xa0 build/Configuration/production/ringBuffer.o
- .debug_frame     0x000898         0x68 build/Configuration/production/swMatrix.o
- .debug_frame     0x000900         0x30 build/Configuration/production/_ext/1472/IR_format.o
+ .debug_frame     0x000548         0xd8 build/Configuration/production/system.o
+ .debug_frame     0x000620         0xbc build/Configuration/production/app_device_keyboard.o
+ .debug_frame     0x0006dc         0xc8 build/Configuration/production/main.o
+ .debug_frame     0x0007a4         0x30 build/Configuration/production/app_led_usb_status.o
+ .debug_frame     0x0007d4         0xa0 build/Configuration/production/ringBuffer.o
+ .debug_frame     0x000874         0x68 build/Configuration/production/swMatrix.o
+ .debug_frame     0x0008dc         0x30 build/Configuration/production/_ext/1472/IR_format.o
 
 .debug_str        0x000000        0x696
  *(.debug_str)
@@ -534,8 +531,9 @@ __CONFIG1
  .debug_str       0x000385         0xa1 build/Configuration/production/usb_hal_16bit.o
  .debug_str       0x000426         0x5f build/Configuration/production/system.o
  .debug_str       0x000485         0x90 build/Configuration/production/app_device_keyboard.o
- .debug_str       0x000515        0x122 build/Configuration/production/main.o
- .debug_str       0x000637         0x1a build/Configuration/production/app_led_usb_status.o
+ .debug_str       0x000515        0x117 build/Configuration/production/main.o
+ .debug_str       0x00062c         0x1a build/Configuration/production/app_led_usb_status.o
+ .debug_str       0x000646          0xb build/Configuration/production/ringBuffer.o
  .debug_str       0x000651         0x45 build/Configuration/production/swMatrix.o
 
 .debug_loc
@@ -545,7 +543,7 @@ __CONFIG1
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x8f5
+                  0x000000        0x8e4
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0x53 build/Configuration/production/leds.o
@@ -562,19 +560,19 @@ __CONFIG1
  .debug_pubnames
                   0x000510         0xa2 build/Configuration/production/usb_hal_16bit.o
  .debug_pubnames
-                  0x0005b2         0x90 build/Configuration/production/system.o
+                  0x0005b2         0x7f build/Configuration/production/system.o
  .debug_pubnames
-                  0x000642         0xe7 build/Configuration/production/app_device_keyboard.o
+                  0x000631         0xe7 build/Configuration/production/app_device_keyboard.o
  .debug_pubnames
-                  0x000729         0x85 build/Configuration/production/main.o
+                  0x000718         0x85 build/Configuration/production/main.o
  .debug_pubnames
-                  0x0007ae         0x2d build/Configuration/production/app_led_usb_status.o
+                  0x00079d         0x2d build/Configuration/production/app_led_usb_status.o
  .debug_pubnames
-                  0x0007db         0x76 build/Configuration/production/ringBuffer.o
+                  0x0007ca         0x76 build/Configuration/production/ringBuffer.o
  .debug_pubnames
-                  0x000851         0x85 build/Configuration/production/swMatrix.o
+                  0x000840         0x85 build/Configuration/production/swMatrix.o
  .debug_pubnames
-                  0x0008d6         0x1f build/Configuration/production/_ext/1472/IR_format.o
+                  0x0008c5         0x1f build/Configuration/production/_ext/1472/IR_format.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -1981,7 +1979,7 @@ LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x000138        0xcbe
+                  0x000138        0xccb
  .debug_pubtypes
                   0x000138         0x9f build/Configuration/production/leds.o
  .debug_pubtypes
@@ -2001,54 +1999,54 @@ LOAD data_init
  .debug_pubtypes
                   0x00087d        0x12e build/Configuration/production/app_device_keyboard.o
  .debug_pubtypes
-                  0x0009ab        0x33a build/Configuration/production/main.o
+                  0x0009ab        0x319 build/Configuration/production/main.o
  .debug_pubtypes
-                  0x000ce5         0x55 build/Configuration/production/app_led_usb_status.o
+                  0x000cc4         0x55 build/Configuration/production/app_led_usb_status.o
  .debug_pubtypes
-                  0x000d3a         0x2a build/Configuration/production/ringBuffer.o
+                  0x000d19         0x58 build/Configuration/production/ringBuffer.o
  .debug_pubtypes
-                  0x000d64         0x74 build/Configuration/production/swMatrix.o
+                  0x000d71         0x74 build/Configuration/production/swMatrix.o
  .debug_pubtypes
-                  0x000dd8         0x1e build/Configuration/production/_ext/1472/IR_format.o
+                  0x000de5         0x1e build/Configuration/production/_ext/1472/IR_format.o
 
 __c30_signature
-                  0x000df6         0x6c
+                  0x000e03         0x6c
  __c30_signature
-                  0x000df6          0x6 build/Configuration/production/leds.o
+                  0x000e03          0x6 build/Configuration/production/leds.o
  __c30_signature
-                  0x000dfc          0x6 build/Configuration/production/buttons.o
+                  0x000e09          0x6 build/Configuration/production/buttons.o
  __c30_signature
-                  0x000e02          0x6 build/Configuration/production/usb_device.o
+                  0x000e0f          0x6 build/Configuration/production/usb_device.o
  __c30_signature
-                  0x000e08          0x6 build/Configuration/production/usb_descriptors.o
+                  0x000e15          0x6 build/Configuration/production/usb_descriptors.o
  __c30_signature
-                  0x000e0e          0x6 build/Configuration/production/usb_device_hid.o
+                  0x000e1b          0x6 build/Configuration/production/usb_device_hid.o
  __c30_signature
-                  0x000e14          0x6 build/Configuration/production/usb_events.o
+                  0x000e21          0x6 build/Configuration/production/usb_events.o
  __c30_signature
-                  0x000e1a          0x6 build/Configuration/production/usb_hal_16bit.o
+                  0x000e27          0x6 build/Configuration/production/usb_hal_16bit.o
  __c30_signature
-                  0x000e20          0x6 build/Configuration/production/system.o
+                  0x000e2d          0x6 build/Configuration/production/system.o
  __c30_signature
-                  0x000e26          0x6 build/Configuration/production/app_device_keyboard.o
+                  0x000e33          0x6 build/Configuration/production/app_device_keyboard.o
  __c30_signature
-                  0x000e2c          0x6 build/Configuration/production/main.o
+                  0x000e39          0x6 build/Configuration/production/main.o
  __c30_signature
-                  0x000e32          0x6 build/Configuration/production/app_led_usb_status.o
+                  0x000e3f          0x6 build/Configuration/production/app_led_usb_status.o
  __c30_signature
-                  0x000e38          0x6 build/Configuration/production/ringBuffer.o
+                  0x000e45          0x6 build/Configuration/production/ringBuffer.o
  __c30_signature
-                  0x000e3e          0x6 build/Configuration/production/swMatrix.o
+                  0x000e4b          0x6 build/Configuration/production/swMatrix.o
  __c30_signature
-                  0x000e44          0x6 build/Configuration/production/_ext/1472/IR_format.o
+                  0x000e51          0x6 build/Configuration/production/_ext/1472/IR_format.o
  __c30_signature
-                  0x000e4a          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libpic30-elf.a(crt0_extended24.o)
+                  0x000e57          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libpic30-elf.a(crt0_extended24.o)
  __c30_signature
-                  0x000e50          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libpic30-elf.a(data_init_24.o)
+                  0x000e5d          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libpic30-elf.a(data_init_24.o)
  __c30_signature
-                  0x000e56          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libc-elf.a(memcpy.daeo)
+                  0x000e63          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libc-elf.a(memcpy.daeo)
  __c30_signature
-                  0x000e5c          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libc-elf.a(memset.daeo)
+                  0x000e69          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libc-elf.a(memset.daeo)
 
 .nbss               0x0800         0x50
  .nbss              0x0800         0x26 build/Configuration/production/usb_device.o
@@ -2111,9 +2109,9 @@ __c30_signature
  .bss               0x0a58         0x3c build/Configuration/production/swMatrix.o
                     0x0a58                  _mSw
 
-_059C8DE05c260245
+_05078DE05c2b5a10
                     0x0c00         0x20
- _059C8DE05c260245
+ _05078DE05c2b5a10
                     0x0c00         0x20 build/Configuration/production/usb_device.o
                     0x0c00                  _BDT
 
@@ -2154,11 +2152,6 @@ _059C8DE05c260245
  .ivt._USB1Interrupt
                   0x0000c0          0x2 build/Configuration/production/system.o
 
-.ivt._T3Interrupt
-                  0x000024          0x2
- .ivt._T3Interrupt
-                  0x000024          0x2 build/Configuration/production/system.o
-
 .ivt._IC1Interrupt
                   0x000016          0x2
  .ivt._IC1Interrupt
@@ -2169,85 +2162,85 @@ _059C8DE05c260245
  .ivt._INT1Interrupt
                   0x00003c          0x2 build/Configuration/production/system.o
 
-.const              0x8526        0x296 load address 0x000526  
- .const             0x8526        0x180 build/Configuration/production/swMatrix.o
-                    0x8526                  _keymap
-                    0x85e6                  _keymapFn
- .const             0x86a6         0x98 build/Configuration/production/usb_descriptors.o
-                    0x86a6                  _device_dsc
-                    0x86b8                  _configDescriptor1
-                    0x86e2                  _sd000
-                    0x86e6                  _sd001
-                    0x871a                  _sd002
-                    0x8736                  _USB_CD_Ptr
-                    0x8738                  _USB_SD_Ptr
- .const             0x873e         0x7e build/Configuration/production/app_device_keyboard.o
-                    0x873e                  _hid_rpt01
+.const              0x8504        0x296 load address 0x000504  
+ .const             0x8504        0x180 build/Configuration/production/swMatrix.o
+                    0x8504                  _keymap
+                    0x85c4                  _keymapFn
+ .const             0x8684         0x98 build/Configuration/production/usb_descriptors.o
+                    0x8684                  _device_dsc
+                    0x8696                  _configDescriptor1
+                    0x86c0                  _sd000
+                    0x86c4                  _sd001
+                    0x86f8                  _sd002
+                    0x8714                  _USB_CD_Ptr
+                    0x8716                  _USB_SD_Ptr
+ .const             0x871c         0x7e build/Configuration/production/app_device_keyboard.o
+                    0x871c                  _hid_rpt01
 
-.text             0x0007bc       0x1fc6
- .text            0x0007bc        0xfa6 build/Configuration/production/usb_device.o
-                  0x0007bc                  _USBDeviceInit
-                  0x0008b2                  _USBDeviceTasks
-                  0x000a3c                  _USBEnableEndpoint
-                  0x000a76                  _USBTransferOnePacket
-                  0x000b1c                  _USBStallEndpoint
-                  0x000bb6                  _USBCancelIO
-                  0x000c6a                  _USBDeviceDetach
-                  0x000c76                  _USBDeviceAttach
-                  0x000caa                  _USBCtrlEPAllowStatusStage
-                  0x000d20                  _USBCtrlEPAllowDataStage
-                  0x00171e                  _USBIncrement1msInternalTimers
-                  0x001748                  _USBGet1msTickCount
- .text            0x001762        0x6be build/Configuration/production/main.o
-                  0x001762                  _main
-                  0x00179e                  _checkTimeout
-                  0x001814                  _decodeReport
-                  0x001b1e                  _waitReport
-                  0x001b84                  _sendReport
-                  0x001d04                  _init
- .text            0x001e20        0x384 build/Configuration/production/swMatrix.o
-                  0x001e20                  _swInit
-                  0x001e7e                  _swUnregister
-                  0x002018                  _swRegister
- .text            0x0021a4        0x21c build/Configuration/production/usb_hal_16bit.o
-                  0x0021a4                  _USBSleepOnSuspend
-                  0x0021c8                  _USBRemoteWakeupAssertBlocking
-                  0x002242                  _USBVBUSSessionValidStateGet
-                  0x0022cc                  _USBMaskAllUSBInterrupts
-                  0x0022e6                  _USBRestoreUSBInterrupts
- .text            0x0023c0        0x190 build/Configuration/production/leds.o
-                  0x0023c0                  _LED_On
-                  0x0023f2                  _LED_Off
-                  0x002424                  _LED_Toggle
-                  0x0024b6                  _LED_Get
-                  0x00251e                  _LED_Enable
- .text            0x002550         0xf0 build/Configuration/production/usb_device_hid.o
-                  0x002550                  _USBCheckHIDRequest
- .text            0x002640         0xb8 build/Configuration/production/app_device_keyboard.o
-                  0x002640                  _APP_KeyboardInit
-                  0x00266e                  _APP_KeyboardTasks
-                  0x00267a                  build/Configuration/production/app_device_keyboard.o:_USBHIDCBSetReportComplete
-                  0x00268a                  _USBHIDCBSetReportHandler
-                  0x0026e2                  _USBHIDCBSetIdleRateHandler
- .text            0x0026f8         0x8a build/Configuration/production/ringBuffer.o
-                  0x0026f8                  _bufWrite
-                  0x002718                  _bufWriteIntIC1
-                  0x002738                  _bufRead
-                  0x002756                  _bufClear
-                  0x002766                  _bufInit
+.text             0x00079a       0x2564
+ .text            0x00079a        0xfa6 build/Configuration/production/usb_device.o
+                  0x00079a                  _USBDeviceInit
+                  0x000890                  _USBDeviceTasks
+                  0x000a1a                  _USBEnableEndpoint
+                  0x000a54                  _USBTransferOnePacket
+                  0x000afa                  _USBStallEndpoint
+                  0x000b94                  _USBCancelIO
+                  0x000c48                  _USBDeviceDetach
+                  0x000c54                  _USBDeviceAttach
+                  0x000c88                  _USBCtrlEPAllowStatusStage
+                  0x000cfe                  _USBCtrlEPAllowDataStage
+                  0x0016fc                  _USBIncrement1msInternalTimers
+                  0x001726                  _USBGet1msTickCount
+ .text            0x001740        0x690 build/Configuration/production/main.o
+                  0x001740                  _main
+                  0x00177c                  _checkTimeout
+                  0x0017f2                  _decodeReport
+                  0x001b10                  _waitReport
+                  0x001b5e                  _sendReport
+                  0x001cac                  _init
+ .text            0x001dd0        0x664 build/Configuration/production/app_device_keyboard.o
+                  0x001dd0                  _APP_KeyboardInit
+                  0x001dfe                  _APP_KeyboardTasks
+                  0x0023b6                  build/Configuration/production/app_device_keyboard.o:_USBHIDCBSetReportComplete
+                  0x0023c6                  _USBHIDCBSetReportHandler
+                  0x00241e                  _USBHIDCBSetIdleRateHandler
+ .text            0x002434        0x384 build/Configuration/production/swMatrix.o
+                  0x002434                  _swInit
+                  0x002492                  _swUnregister
+                  0x00262c                  _swRegister
+ .text            0x0027b8        0x21c build/Configuration/production/usb_hal_16bit.o
+                  0x0027b8                  _USBSleepOnSuspend
+                  0x0027dc                  _USBRemoteWakeupAssertBlocking
+                  0x002856                  _USBVBUSSessionValidStateGet
+                  0x0028e0                  _USBMaskAllUSBInterrupts
+                  0x0028fa                  _USBRestoreUSBInterrupts
+ .text            0x0029d4        0x190 build/Configuration/production/leds.o
+                  0x0029d4                  _LED_On
+                  0x002a06                  _LED_Off
+                  0x002a38                  _LED_Toggle
+                  0x002aca                  _LED_Get
+                  0x002b32                  _LED_Enable
+ .text            0x002b64         0xf0 build/Configuration/production/usb_device_hid.o
+                  0x002b64                  _USBCheckHIDRequest
+ .text            0x002c54         0xaa build/Configuration/production/ringBuffer.o
+                  0x002c54                  _bufWrite
+                  0x002c74                  _bufWriteIntIC1
+                  0x002c94                  _bufRead
+                  0x002cd2                  _bufClear
+                  0x002ce2                  _bufInit
 
-.dinit            0x002782         0x7e
- .dinit           0x002782         0x7e data_init
+.dinit            0x002cfe         0x7e
+ .dinit           0x002cfe         0x7e data_init
 
-.text             0x002800        0x1e4
- .text            0x002800         0x78 build/Configuration/production/usb_events.o
-                  0x002800                  _USER_USB_CALLBACK_EVENT_HANDLER
- .text            0x002878         0x74 build/Configuration/production/app_led_usb_status.o
-                  0x002878                  _APP_LEDUpdateUSBStatus
- .text            0x0028ec         0x6e build/Configuration/production/buttons.o
-                  0x0028ec                  _BUTTON_IsPressed
-                  0x002934                  _BUTTON_Enable
- .text            0x00295a         0x5a build/Configuration/production/_ext/1472/IR_format.o
-                  0x00295a                  _checksum
- .text            0x0029b4         0x30 build/Configuration/production/system.o
-                  0x0029b4                  _SYSTEM_Initialize
+.text             0x002d7c        0x1e4
+ .text            0x002d7c         0x78 build/Configuration/production/usb_events.o
+                  0x002d7c                  _USER_USB_CALLBACK_EVENT_HANDLER
+ .text            0x002df4         0x74 build/Configuration/production/app_led_usb_status.o
+                  0x002df4                  _APP_LEDUpdateUSBStatus
+ .text            0x002e68         0x6e build/Configuration/production/buttons.o
+                  0x002e68                  _BUTTON_IsPressed
+                  0x002eb0                  _BUTTON_Enable
+ .text            0x002ed6         0x5a build/Configuration/production/_ext/1472/IR_format.o
+                  0x002ed6                  _checksum
+ .text            0x002f30         0x30 build/Configuration/production/system.o
+                  0x002f30                  _SYSTEM_Initialize

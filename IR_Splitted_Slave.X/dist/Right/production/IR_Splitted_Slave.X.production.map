@@ -6,7 +6,7 @@ Linker command line:
   -pivt0x8=08h -cs \
   -h+dist/Right/production\IR_Splitted_Slave.X.production.sym \
   --cmf=dist/Right/production\IR_Splitted_Slave.X.production.cmf -z \
-  -Q18LF25K42 -oC:\Users\imada\AppData\Local\Temp\s3l0.2 \
+  -Q18LF25K42 -oC:\Users\imada\AppData\Local\Temp\sfms.2 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/Right/production/IR_Splitted_Slave.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=0236h-07ffh -pstack=STACK -ACODE=00h-07FFFh \
@@ -25,7 +25,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -pparam0=BANK0 \
-  C:\Users\imada\AppData\Local\Temp\s3l0.o \
+  C:\Users\imada\AppData\Local\Temp\sfms.o \
   dist/Right/production\IR_Splitted_Slave.X.production.o 
 
 Object code version is 3.11
@@ -38,7 +38,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\imada\AppData\Local\Temp\s3l0.o
+C:\Users\imada\AppData\Local\Temp\sfms.o
                 init                                 AE       AE        4        4       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000       10   200000       0

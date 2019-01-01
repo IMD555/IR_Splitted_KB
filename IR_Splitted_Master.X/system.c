@@ -164,14 +164,14 @@ void __attribute__((interrupt, auto_psv)) _USB1Interrupt()
 ////	irRxBuffer.buffer[irRxBuffer.writeIndex++] = 10;
 //}
 
-void __attribute__((interrupt, auto_psv)) _T3Interrupt()
-{
-	IEC0bits.T2IE = 0;
-	IEC0bits.IC1IE = 0;
-//	irRxBuffer.buffer[irRxBuffer.writeIndex++] = 10;
-	IFS0bits.T3IF = 0;
-	IEC0bits.T3IE = 0;
-}
+//void __attribute__((interrupt, auto_psv)) _T3Interrupt()
+//{
+////	IEC0bits.T2IE = 0;
+//	IEC0bits.IC1IE = 0;
+////	irRxBuffer.buffer[irRxBuffer.writeIndex++] = 10;
+//	IFS0bits.T3IF = 0;
+//	IEC0bits.T3IE = 0;
+//}
 
 //void __attribute__((interrupt, auto_psv)) _T4Interrupt()
 //{
@@ -306,12 +306,11 @@ void __attribute__((interrupt, auto_psv)) _INT1Interrupt()
 	//always enabled
 	//t4 reset when any data receiving
 	INTCON2bits.INT1EP ^= 1;
+	IFS1bits.INT1IF = 0;
 
 	uint8_t en = IEC1bits.T4IE;
 	IEC1bits.T4IE = 0;
 	TMR4 = 0;
 	IFS1bits.T4IF = 0;
 	IEC1bits.T4IE = en;
-
-	IFS1bits.INT1IF = 0;
 }
